@@ -15,28 +15,14 @@
   <header class="navbar">
     <div class="nav-brand" onclick="window.AppBridge.switchBank('unified')">
       <div class="nav-logo-icon">🗺️</div>
-      <div>
+      <div class="nav-brand-text">
         <div class="nav-title">美丽中国·版图小达人</div>
         <div class="nav-subtitle">全国国家版图知识竞赛备赛助手</div>
       </div>
     </div>
-    <div class="nav-actions">
-      <!-- 孩子切换胶囊 -->
-      <button class="icon-btn child-chip-btn" id="child-chip-btn" onclick="window.AppBridge.openChildModal()" title="切换正在答题的孩子">
-        <span id="child-chip-avatar">🦁</span>
-        <span id="child-chip-name">大宝</span>
-        <span style="font-size: 10px; opacity: 0.7;">▾</span>
-      </button>
 
-      <!-- 云同步状态胶囊 -->
-      <button class="icon-btn sync-badge-btn" id="sync-badge-btn" onclick="window.AppBridge.openSyncModal()" title="跨设备云同步设置">
-        <span id="sync-icon">☁️</span>
-        <span id="sync-status-text">未绑定</span>
-      </button>
-
-      <button class="icon-btn" id="study-mode-toggle-btn" onclick="window.AppBridge.toggleStudyMode()" title="切换做题/背题模式" style="width: auto; padding: 0 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
-        🎯 做题模式
-      </button>
+    <!-- 右侧快捷功能图标组 -->
+    <div class="nav-quick-actions">
       <button class="icon-btn" onclick="window.AppBridge.openHandbook(1)" title="打开《国家版图知识手册》">
         📖
       </button>
@@ -50,15 +36,38 @@
         🌙
       </button>
     </div>
+
+    <!-- 用户与状态次级栏 (在桌面端靠右融合，在手机/平板端优雅排列成第二行) -->
+    <div class="nav-status-bar">
+      <!-- 孩子切换胶囊 -->
+      <button class="icon-btn child-chip-btn" id="child-chip-btn" onclick="window.AppBridge.openChildModal()" title="切换正在答题的孩子">
+        <span id="child-chip-avatar">🦁</span>
+        <span id="child-chip-name">大宝</span>
+        <span class="chip-arrow">▾</span>
+      </button>
+
+      <!-- 云同步状态胶囊 -->
+      <button class="icon-btn sync-badge-btn" id="sync-badge-btn" onclick="window.AppBridge.openSyncModal()" title="跨设备云同步设置">
+        <span id="sync-icon">☁️</span>
+        <span id="sync-status-text">未绑定</span>
+      </button>
+
+      <!-- 模式切换 -->
+      <button class="icon-btn study-mode-btn" id="study-mode-toggle-btn" onclick="window.AppBridge.toggleStudyMode()" title="切换做题/背题模式">
+        🎯 做题模式
+      </button>
+    </div>
   </header>
 
   <!-- 主体工作区 -->
   <main class="app-container">
     <!-- 顶部控制条 -->
     <section class="control-bar">
-      <div class="control-bar-row">
-        <div class="bank-select-wrapper">
-          <label for="bank-select" style="font-size: 0.92rem; font-weight: 700; color: var(--text-muted); white-space: nowrap;">📚 题库选择：</label>
+      <div class="bank-select-wrapper">
+        <label for="bank-select" class="bank-select-label">
+          <span>📚</span> 题库选择：
+        </label>
+        <div class="custom-select-container">
           <select id="bank-select" class="custom-select">
             <option value="unified">⭐ 全库去重纯享版 (1521题·高性价比·消除34%重复)</option>
             <option value="elem">🧒 小学组官方样题 (267题·全标准答案)</option>
@@ -72,7 +81,7 @@
       </div>
 
       <!-- 模式选择药丸按钮 -->
-      <div class="control-bar-row">
+      <div class="mode-pills-wrapper">
         <div class="mode-pills">
           <button class="pill-btn active" data-mode="sequence" onclick="window.AppBridge.switchMode('sequence')">
             📝 顺序刷题

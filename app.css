@@ -71,30 +71,34 @@ body {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-/* 顶部导航 */
+/* ========================================================
+   顶部导航栏（支持 桌面 / 平板 / 手机 全端响应式）
+   ======================================================== */
 .navbar {
   background: var(--card-bg);
   border-bottom: 1px solid var(--border-color);
-  padding: 12px 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 40;
   box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
 }
 
+/* 品牌 Logo 区域 */
 .nav-brand {
   display: flex;
   align-items: center;
   gap: 10px;
   cursor: pointer;
+  user-select: none;
+  min-width: 0;
+  flex-shrink: 0;
 }
 
 .nav-logo-icon {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
   background: linear-gradient(135deg, #059669, #0284c7);
   border-radius: var(--radius-sm);
   display: flex;
@@ -103,6 +107,11 @@ body {
   color: #fff;
   font-size: 20px;
   box-shadow: 0 2px 5px rgba(5, 150, 105, 0.3);
+  flex-shrink: 0;
+}
+
+.nav-brand-text {
+  min-width: 0;
 }
 
 .nav-title {
@@ -110,15 +119,22 @@ body {
   font-weight: 700;
   color: var(--text-main);
   letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .nav-subtitle {
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   color: var(--text-muted);
   font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.nav-actions {
+/* 右侧快捷工具图标组 */
+.nav-quick-actions {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -128,15 +144,17 @@ body {
   background: var(--bg-main);
   border: 1px solid var(--border-color);
   color: var(--text-main);
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 17px;
   transition: all 0.2s ease;
+  flex-shrink: 0;
 }
 
 .icon-btn:hover {
@@ -152,6 +170,220 @@ body {
   border-color: var(--primary);
 }
 
+/* 用户状态胶囊栏 (孩子、云同步、做题模式) */
+.nav-status-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.child-chip-btn {
+  width: auto !important;
+  height: 34px !important;
+  padding: 0 12px !important;
+  border-radius: 17px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px;
+  background: var(--primary-light) !important;
+  border-color: var(--primary-border) !important;
+  color: var(--primary) !important;
+  font-size: 0.86rem !important;
+  font-weight: 700;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.child-chip-btn .chip-arrow {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.sync-badge-btn {
+  width: auto !important;
+  height: 34px !important;
+  padding: 0 10px !important;
+  border-radius: 17px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px;
+  font-size: 0.8rem !important;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.study-mode-btn {
+  width: auto !important;
+  height: 34px !important;
+  padding: 0 12px !important;
+  border-radius: 17px !important;
+  font-size: 0.84rem !important;
+  font-weight: 600 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+/* 桌面端布局 (>= 920px)：一行整齐排开 */
+@media (min-width: 920px) {
+  .navbar {
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .nav-brand {
+    order: 1;
+  }
+  .nav-status-bar {
+    order: 2;
+    margin-left: auto;
+  }
+  .nav-quick-actions {
+    order: 3;
+  }
+}
+
+/* 手机和平板端布局 (< 920px)：响应式两层分明结构，绝不垂直挤压 */
+@media (max-width: 919px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "brand quick"
+      "status status";
+    gap: 8px 10px;
+    padding: 10px 14px;
+  }
+  .nav-brand {
+    grid-area: brand;
+    min-width: 0;
+  }
+  .nav-quick-actions {
+    grid-area: quick;
+    gap: 6px;
+  }
+  .nav-quick-actions .icon-btn {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    font-size: 16px;
+  }
+  .nav-status-bar {
+    grid-area: status;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+  .nav-status-bar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* 手机端精细化排版 (< 640px) */
+@media (max-width: 640px) {
+  .navbar {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+  .nav-title {
+    font-size: 0.98rem;
+    letter-spacing: 0;
+  }
+  .nav-subtitle {
+    display: none;
+  }
+  .nav-logo-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    font-size: 17px;
+  }
+  .nav-quick-actions {
+    gap: 5px;
+  }
+  .nav-quick-actions .icon-btn {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    font-size: 15px;
+  }
+  .child-chip-btn {
+    height: 32px !important;
+    padding: 0 10px !important;
+    font-size: 0.82rem !important;
+  }
+  .sync-badge-btn {
+    height: 32px !important;
+    padding: 0 8px !important;
+    font-size: 0.78rem !important;
+  }
+  .study-mode-btn {
+    height: 32px !important;
+    padding: 0 10px !important;
+    font-size: 0.8rem !important;
+  }
+  .bank-select-wrapper {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 6px !important;
+  }
+  .bank-select-label {
+    font-size: 0.84rem;
+  }
+  .custom-select {
+    width: 100% !important;
+    padding: 9px 12px;
+    font-size: 0.88rem;
+  }
+  .control-bar {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+  .pill-btn {
+    padding: 6px 12px;
+    font-size: 0.82rem;
+  }
+}
+
+/* 超窄屏手机 (< 380px 如 iPhone SE) */
+@media (max-width: 380px) {
+  .navbar {
+    padding: 6px 10px;
+  }
+  .nav-title {
+    font-size: 0.92rem;
+  }
+  .nav-logo-icon {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    font-size: 15px;
+  }
+  .nav-quick-actions {
+    gap: 4px;
+  }
+  .nav-quick-actions .icon-btn {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    font-size: 14px;
+  }
+  .nav-status-bar {
+    gap: 6px;
+  }
+}
+
 /* 主内容容器 */
 .app-container {
   max-width: 900px;
@@ -164,25 +396,16 @@ body {
   gap: 16px;
 }
 
-/* 顶部选择条与状态面板 */
+/* 控制条：题库选择与刷题模式 */
 .control-bar {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 14px 18px;
+  padding: 12px 18px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   box-shadow: var(--shadow-sm);
-}
-
-.control-bar-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  width: 100%;
-  flex-wrap: wrap;
 }
 
 .bank-select-wrapper {
@@ -192,35 +415,74 @@ body {
   width: 100%;
 }
 
-.custom-select {
+.bank-select-label {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.custom-select-container {
   flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+.custom-select {
+  width: 100%;
   background: var(--bg-main);
   border: 1px solid var(--border-color);
   color: var(--text-main);
-  padding: 8px 14px;
-  font-size: 0.95rem;
+  padding: 8px 12px;
+  font-size: 0.94rem;
   font-weight: 600;
   border-radius: var(--radius-sm);
   cursor: pointer;
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .custom-select:focus {
   border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+/* 模式药丸按钮栏（手机端可横向顺滑滑动，平板与电脑平铺） */
+.mode-pills-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.mode-pills-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .mode-pills {
   display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+@media (min-width: 768px) {
+  .mode-pills {
+    flex-wrap: wrap;
+  }
 }
 
 .pill-btn {
   background: var(--bg-main);
   border: 1px solid var(--border-color);
   color: var(--text-muted);
-  padding: 6px 14px;
+  padding: 7px 14px;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
@@ -229,6 +491,8 @@ body {
   align-items: center;
   gap: 5px;
   transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .pill-btn:hover {
@@ -1058,39 +1322,175 @@ body {
 }
 
 /* 移动端媒体查询适配 */
-@media (max-width: 640px) {
+/* ========================================================
+   移动端与平板端深度适配
+   ======================================================== */
+@media (max-width: 768px) {
   .app-container {
-    padding: 10px;
+    padding: 12px;
     gap: 12px;
   }
-  .navbar {
-    padding: 10px 14px;
-  }
-  .nav-title {
-    font-size: 1.05rem;
-  }
+
   .question-card {
-    padding: 16px 16px;
+    padding: 18px 16px;
     border-radius: var(--radius-md);
   }
+
   .q-title {
-    font-size: 1.05rem;
+    font-size: 1.08rem;
+    line-height: 1.6;
   }
-  .option-item {
-    padding: 12px 14px;
-    font-size: 0.95rem;
+
+  .options-list {
     gap: 10px;
   }
+
+  .option-item {
+    padding: 12px 14px;
+    font-size: 0.96rem;
+    gap: 10px;
+  }
+
+  .opt-letter {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    font-size: 0.85rem;
+  }
+
+  .bottom-nav {
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .bottom-nav .nav-btn {
+    padding: 11px 12px;
+    font-size: 0.88rem;
+    white-space: nowrap;
+  }
+
+  .handbook-modal-box {
+    height: 94vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 8px 10px;
+    gap: 10px;
+  }
+
+  .question-card {
+    padding: 14px 12px;
+    border-radius: var(--radius-sm);
+  }
+
+  .q-title {
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+
+  .q-tags-bar {
+    gap: 4px;
+  }
+
+  .q-type-badge,
+  .q-source-badge,
+  .q-hot-badge {
+    font-size: 0.72rem;
+    padding: 2px 6px;
+  }
+
+  .option-item {
+    padding: 11px 12px;
+    font-size: 0.92rem;
+    gap: 8px;
+    border-radius: var(--radius-sm);
+  }
+
   .opt-letter {
     width: 28px;
     height: 28px;
-    font-size: 0.85rem;
+    min-width: 28px;
+    font-size: 0.82rem;
   }
-  .nav-btn {
-    padding: 10px 16px;
-    font-size: 0.9rem;
+
+  .bottom-nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
+
+  #prev-btn, #next-btn {
+    flex: 1.2;
+    padding: 10px 6px;
+    font-size: 0.84rem;
+  }
+
+  .bottom-nav > div {
+    display: flex;
+    gap: 6px;
+    flex: 1.6;
+  }
+
+  .bottom-nav > div .nav-btn {
+    flex: 1;
+    padding: 10px 4px;
+    font-size: 0.82rem;
+  }
+
+  .progress-panel {
+    font-size: 0.8rem;
+    gap: 8px;
+  }
+
+  #progress-text {
+    min-width: 50px;
+    font-size: 0.82rem;
+  }
+
+  .stats-badges {
+    gap: 5px;
+  }
+
+  .badge-tag {
+    padding: 2px 5px;
+    font-size: 0.74rem;
+  }
+
+  .modal-overlay {
+    padding: 6px;
+  }
+
+  .modal-box {
+    width: 100%;
+    max-height: 94vh;
+    border-radius: var(--radius-md);
+  }
+
+  .modal-header {
+    padding: 12px 14px;
+  }
+
+  .modal-title {
+    font-size: 1.05rem;
+  }
+
+  .modal-body {
+    padding: 14px;
+  }
+
   .handbook-modal-box {
-    height: 95vh;
+    height: 96vh;
+    max-height: 96vh;
+  }
+
+  .handbook-controls {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .handbook-img-container {
+    padding: 8px;
   }
 }
