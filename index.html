@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>美丽中国·版图小达人 - 全国国家版图知识竞赛随身刷题App</title>
+  <meta name="description" content="专为青少年与学生定制的全国国家版图知识竞赛刷题与备赛平台，集成官方题库、去重精选、高清识图专项与全彩知识手册。" />
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <!-- 庆祝撒花画布 -->
+  <canvas id="confetti-canvas" style="position: fixed; inset: 0; pointer-events: none; z-index: 999;"></canvas>
+
+  <!-- 顶部导航栏 -->
+  <header class="navbar">
+    <div class="nav-brand" onclick="window.AppBridge.switchBank('unified')">
+      <div class="nav-logo-icon">🗺️</div>
+      <div>
+        <div class="nav-title">美丽中国·版图小达人</div>
+        <div class="nav-subtitle">全国国家版图知识竞赛备赛助手</div>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <!-- 孩子切换胶囊 -->
+      <button class="icon-btn child-chip-btn" id="child-chip-btn" onclick="window.AppBridge.openChildModal()" title="切换正在答题的孩子">
+        <span id="child-chip-avatar">🦁</span>
+        <span id="child-chip-name">大宝</span>
+        <span style="font-size: 10px; opacity: 0.7;">▾</span>
+      </button>
+
+      <!-- 云同步状态胶囊 -->
+      <button class="icon-btn sync-badge-btn" id="sync-badge-btn" onclick="window.AppBridge.openSyncModal()" title="跨设备云同步设置">
+        <span id="sync-icon">☁️</span>
+        <span id="sync-status-text">未绑定</span>
+      </button>
+
+      <button class="icon-btn" id="study-mode-toggle-btn" onclick="window.AppBridge.toggleStudyMode()" title="切换做题/背题模式" style="width: auto; padding: 0 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+        🎯 做题模式
+      </button>
+      <button class="icon-btn" onclick="window.AppBridge.openHandbook(1)" title="打开《国家版图知识手册》">
+        📖
+      </button>
+      <button class="icon-btn" onclick="window.AppBridge.openStats()" title="查看学情与勋章">
+        🏆
+      </button>
+      <button class="icon-btn" id="sound-toggle-btn" onclick="window.AppBridge.toggleSound()" title="开启/关闭音效">
+        🔊
+      </button>
+      <button class="icon-btn" id="theme-toggle-btn" onclick="window.AppBridge.toggleTheme()" title="切换明亮/护眼暗黑模式">
+        🌙
+      </button>
+    </div>
+  </header>
+
+  <!-- 主体工作区 -->
+  <main class="app-container">
+    <!-- 顶部控制条 -->
+    <section class="control-bar">
+      <div class="control-bar-row">
+        <div class="bank-select-wrapper">
+          <label for="bank-select" style="font-size: 0.92rem; font-weight: 700; color: var(--text-muted); white-space: nowrap;">📚 题库选择：</label>
+          <select id="bank-select" class="custom-select">
+            <option value="unified">⭐ 全库去重纯享版 (1521题·高性价比·消除34%重复)</option>
+            <option value="elem">🧒 小学组官方样题 (267题·全标准答案)</option>
+            <option value="middle">🧑 中学组官方样题 (268题·全标准答案)</option>
+            <option value="history">📜 历年真题模拟汇编 (632题·全标准答案)</option>
+            <option value="contest25">🏆 2025大赛新赛题 (1143题·实战冲刺)</option>
+            <option value="images">🗺️ 地图识图专项攻坚 (247题·配图大题)</option>
+            <option value="high_freq">🔥 多题库高频必考核心 (218题·必刷)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 模式选择药丸按钮 -->
+      <div class="control-bar-row">
+        <div class="mode-pills">
+          <button class="pill-btn active" data-mode="sequence" onclick="window.AppBridge.switchMode('sequence')">
+            📝 顺序刷题
+          </button>
+          <button class="pill-btn" data-mode="random" onclick="window.AppBridge.switchMode('random')">
+            ⚡ 20题速刷
+          </button>
+          <button class="pill-btn" data-mode="exam" onclick="window.AppBridge.switchMode('exam')">
+            ⏱️ 全真模考
+          </button>
+          <button class="pill-btn" data-mode="mistakes" onclick="window.AppBridge.switchMode('mistakes')">
+            ⚔️ 错题消灭战
+          </button>
+          <button class="pill-btn" data-mode="favorites" onclick="window.AppBridge.switchMode('favorites')">
+            ⭐ 收藏夹
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 进度与数据概览 -->
+    <section class="progress-panel">
+      <div id="progress-text" style="font-weight: 700; color: var(--text-main); min-width: 65px;">0 / 0</div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <div class="stats-badges">
+        <span id="exam-timer-display" style="display: none; color: var(--danger); font-weight: 800;">⏱️ 30:00</span>
+        <span class="badge-tag correct" id="correct-count-badge" title="答对总数">✓ 0</span>
+        <span class="badge-tag wrong" id="wrong-count-badge" title="答错总数">✗ 0</span>
+      </div>
+    </section>
+
+    <!-- 核心试题卡片 -->
+    <article class="question-card" id="question-card-container">
+      <!-- 试题内容由 app.js 动态实时渲染 -->
+    </article>
+
+    <!-- 底部操作导航栏 -->
+    <nav class="bottom-nav">
+      <button class="nav-btn" id="prev-btn" onclick="window.AppBridge.prevQuestion()">
+        ⬅ 上一题
+      </button>
+      <div style="display: flex; gap: 8px;">
+        <button class="nav-btn" id="sheet-btn" onclick="window.AppBridge.openQuestionSheet()" title="查看答题卡与快速跳题">
+          📑 答题卡
+        </button>
+        <button class="nav-btn" onclick="window.AppBridge.openHandbook(3)" title="查阅知识手册对应章节">
+          🔍 查手册
+        </button>
+      </div>
+      <button class="nav-btn primary" id="next-btn" onclick="window.AppBridge.nextQuestion()">
+        下一题 ➡
+      </button>
+    </nav>
+  </main>
+
+  <!-- ==========================================
+       模态框 1：答题卡抽屉
+       ========================================== -->
+  <div class="modal-overlay" id="sheet-modal" onclick="if(event.target===this) window.AppBridge.closeModal('sheet-modal')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">📑 答题卡与题目跳转</div>
+        <button class="modal-close-btn" onclick="window.AppBridge.closeModal('sheet-modal')">×</button>
+      </div>
+      <div class="modal-body">
+        <div style="display: flex; gap: 14px; margin-bottom: 14px; font-size: 0.85rem; color: var(--text-muted); flex-wrap: wrap;">
+          <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 14px; height: 14px; background: var(--success); border-radius: 3px; display: inline-block;"></span>已答对</span>
+          <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 14px; height: 14px; background: var(--danger); border-radius: 3px; display: inline-block;"></span>已答错</span>
+          <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 14px; height: 14px; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 3px; display: inline-block;"></span>未答</span>
+          <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 14px; height: 14px; border: 2px solid var(--accent); border-radius: 3px; display: inline-block;"></span>当前题</span>
+        </div>
+        <div class="card-grid" id="sheet-grid">
+          <!-- 网格格子动态生成 -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       模态框 2：《国家版图知识手册》全彩画册阅读器
+       ========================================== -->
+  <div class="modal-overlay" id="handbook-modal" onclick="if(event.target===this) window.AppBridge.closeModal('handbook-modal')">
+    <div class="modal-box handbook-modal-box">
+      <div class="modal-header">
+        <div class="modal-title">📖 自然资源部《国家版图知识手册》（官方39页全彩版）</div>
+        <button class="modal-close-btn" onclick="window.AppBridge.closeModal('handbook-modal')">×</button>
+      </div>
+      <!-- 快捷章节跳转条 -->
+      <div class="handbook-chapters-bar">
+        <button class="chapter-btn" data-page="1" onclick="window.AppBridge.openHandbook(1)">封面/版权</button>
+        <button class="chapter-btn" data-page="2" onclick="window.AppBridge.openHandbook(2)">目录索引</button>
+        <button class="chapter-btn" data-page="3" onclick="window.AppBridge.openHandbook(3)">第一部分 国家版图定义</button>
+        <button class="chapter-btn" data-page="5" onclick="window.AppBridge.openHandbook(5)">第二部分 中国版图范围</button>
+        <button class="chapter-btn" data-page="9" onclick="window.AppBridge.openHandbook(9)">中国行政区划</button>
+        <button class="chapter-btn" data-page="12" onclick="window.AppBridge.openHandbook(12)">中国领陆与边界</button>
+        <button class="chapter-btn" data-page="16" onclick="window.AppBridge.openHandbook(16)">中国海域与领海空间</button>
+        <button class="chapter-btn" data-page="23" onclick="window.AppBridge.openHandbook(23)">第三部分 地图表达规范</button>
+        <button class="chapter-btn" data-page="24" onclick="window.AppBridge.openHandbook(24)">台湾省表达规范</button>
+        <button class="chapter-btn" data-page="26" onclick="window.AppBridge.openHandbook(26)">钓鱼岛及其附属岛屿</button>
+        <button class="chapter-btn" data-page="29" onclick="window.AppBridge.openHandbook(29)">南海诸岛与十段线</button>
+        <button class="chapter-btn" data-page="33" onclick="window.AppBridge.openHandbook(33)">地图要素与制图六体</button>
+        <button class="chapter-btn" data-page="37" onclick="window.AppBridge.openHandbook(37)">第四部分 维护版图尊严</button>
+      </div>
+      <div class="handbook-viewer">
+        <div class="handbook-controls">
+          <button class="nav-btn" onclick="window.AppBridge.changeHandbookPage(-1)">◀ 上一页</button>
+          <span id="handbook-page-indicator" style="font-weight: 700; color: var(--text-main);">第 1 / 39 页</span>
+          <button class="nav-btn" onclick="window.AppBridge.changeHandbookPage(1)">下一页 ▶</button>
+        </div>
+        <div class="handbook-img-container">
+          <img id="handbook-viewer-img" src="assets/handbook/handbook_p01.jpg" alt="国家版图知识手册" class="handbook-img" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       模态框 3：试题配图高清放大
+       ========================================== -->
+  <div class="modal-overlay" id="image-zoom-modal" onclick="window.AppBridge.closeModal('image-zoom-modal')">
+    <div style="max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
+      <img id="zoom-modal-img" src="" alt="试题高清大图" style="max-width: 100%; max-height: 85vh; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); object-fit: contain; background: #fff;" />
+      <div style="color: #fff; margin-top: 10px; font-size: 0.9rem; background: rgba(0,0,0,0.6); padding: 4px 14px; border-radius: 20px;">
+        点击屏幕任意位置关闭
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       模态框 4：模考与速刷成绩报告单
+       ========================================== -->
+  <div class="modal-overlay" id="report-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">🏆 挑战成绩单</div>
+        <button class="modal-close-btn" onclick="window.AppBridge.closeModal('report-modal')">×</button>
+      </div>
+      <div class="modal-body" id="report-content">
+        <!-- 动态生成成绩报告 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       模态框 6：多孩子档案管理与切换
+       ========================================== -->
+  <div class="modal-overlay" id="child-modal" onclick="if(event.target===this) window.AppBridge.closeModal('child-modal')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">🧒 切换与管理刷题孩子</div>
+        <button class="modal-close-btn" onclick="window.AppBridge.closeModal('child-modal')">×</button>
+      </div>
+      <div class="modal-body">
+        <div style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+          点击头像或卡片即可无缝切换不同孩子，各自独立记录刷题进度、做题结果与错题本：
+        </div>
+        
+        <!-- 孩子卡片列表 -->
+        <div class="children-card-list" id="children-card-list">
+          <!-- 动态渲染 -->
+        </div>
+
+        <!-- 添加新孩子折叠卡片 -->
+        <div style="background: var(--bg-main); border: 1px dashed var(--border-color); border-radius: var(--radius-md); padding: 16px;">
+          <h4 style="margin-bottom: 10px; color: var(--text-main); font-size: 0.95rem;">➕ 登记新孩子</h4>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px;">
+            <input type="text" id="new-child-name" class="form-input" placeholder="输入孩子昵称 (如: 辰辰)" style="flex: 1; min-width: 140px;" />
+            <select id="new-child-grade" class="custom-select" style="min-width: 110px;">
+              <option value="小学组">小学组</option>
+              <option value="中学组">中学组</option>
+            </select>
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px;">选择专属头像：</div>
+          <div class="avatar-picker" id="new-child-avatar-picker">
+            <span class="avatar-pick-item selected" data-avatar="🦁">🦁</span>
+            <span class="avatar-pick-item" data-avatar="🐯">🐯</span>
+            <span class="avatar-pick-item" data-avatar="🐼">🐼</span>
+            <span class="avatar-pick-item" data-avatar="🦊">🦊</span>
+            <span class="avatar-pick-item" data-avatar="🐱">🐱</span>
+            <span class="avatar-pick-item" data-avatar="🐶">🐶</span>
+            <span class="avatar-pick-item" data-avatar="🚀">🚀</span>
+            <span class="avatar-pick-item" data-avatar="🌟">🌟</span>
+            <span class="avatar-pick-item" data-avatar="🏆">🏆</span>
+            <span class="avatar-pick-item" data-avatar="🎨">🎨</span>
+            <span class="avatar-pick-item" data-avatar="🗺️">🗺️</span>
+            <span class="avatar-pick-item" data-avatar="🎯">🎯</span>
+          </div>
+          <button class="nav-btn primary" style="margin-top: 14px; width: 100%; justify-content: center;" onclick="window.AppBridge.addNewChild()">
+            确认添加并切换
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       模态框 7：数据方舟 · 跨终端云同步
+       ========================================== -->
+  <div class="modal-overlay" id="sync-modal" onclick="if(event.target===this) window.AppBridge.closeModal('sync-modal')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">☁️ 数据方舟 · 跨终端云同步</div>
+        <button class="modal-close-btn" onclick="window.AppBridge.closeModal('sync-modal')">×</button>
+      </div>
+      <div class="modal-body" style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="background: linear-gradient(135deg, var(--primary-light), var(--accent-light)); border: 1px solid var(--primary-border); border-radius: var(--radius-md); padding: 14px; display: flex; align-items: center; gap: 12px;">
+          <div style="font-size: 28px;">📡</div>
+          <div style="font-size: 0.86rem; color: var(--text-main);">
+            <div style="font-weight: 700; margin-bottom: 2px;">多设备无缝互通</div>
+            输入相同的家庭同步码，可在手机、平板、电脑间实时互通孩子的做题结果、错题消灭进度与收藏。
+          </div>
+        </div>
+
+        <div>
+          <label for="sync-code-input" style="font-size: 0.88rem; font-weight: 700; color: var(--text-main); display: block; margin-bottom: 6px;">
+            家庭同步码 (支持中文、字母、数字)：
+          </label>
+          <div style="display: flex; gap: 8px;">
+            <input type="text" id="sync-code-input" class="form-input" placeholder="例如: 辰辰一家 或 myfamily888" />
+            <button class="nav-btn primary" onclick="window.AppBridge.saveSyncCode()" style="white-space: nowrap;">
+              保存绑定
+            </button>
+          </div>
+          <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 5px;">
+            🔒 项目隔离保障：本应用自动采用 <code>bc_</code> 项目命名空间隔离，与打卡工具及其他应用数据互不干扰！
+          </div>
+        </div>
+
+        <!-- 快捷操作区 -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+          <button class="nav-btn primary" onclick="window.AppBridge.syncNow()" style="justify-content: center; font-size: 0.88rem; padding: 12px 6px;">
+            🔄 立即双向合并
+          </button>
+          <button class="nav-btn" onclick="window.AppBridge.pushToCloud()" style="justify-content: center; font-size: 0.88rem; padding: 12px 6px;">
+            ⬆️ 上传覆盖云端
+          </button>
+          <button class="nav-btn" onclick="window.AppBridge.pullFromCloud()" style="justify-content: center; font-size: 0.88rem; padding: 12px 6px;">
+            ⬇️ 从云端拉取覆盖
+          </button>
+        </div>
+
+        <!-- 状态显示与设置 -->
+        <div style="background: var(--bg-main); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 12px; font-size: 0.85rem; display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; justify-content: space-between;">
+            <span style="color: var(--text-muted);">当前云端状态：</span>
+            <span id="modal-sync-status-text" style="font-weight: 700; color: var(--primary);">未绑定</span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span style="color: var(--text-muted);">上次同步时间：</span>
+            <span id="modal-last-sync-time" style="color: var(--text-muted);">暂无记录</span>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-color); padding-top: 8px; margin-top: 4px;">
+            <span>做题时自动静默同步</span>
+            <input type="checkbox" id="auto-sync-checkbox" onchange="window.AppBridge.toggleAutoSync(this.checked)" checked style="width: 18px; height: 18px; cursor: pointer;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 离线核心题库数据与应用业务脚本 -->
+  <script src="questions_data.js"></script>
+  <script src="sync.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

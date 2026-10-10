@@ -1,0 +1,19 @@
+# Python & Virtual Env
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Scratch & Test artifacts
+scratch/
+test_screenshot_*.png
+*.tmp*
+*.bak
+*.log
+
+# IDE & Editor
+.vscode/
+.idea/
+*.sw?
