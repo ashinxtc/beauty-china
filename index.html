@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>美丽中国·版图小达人 - 全国国家版图知识竞赛随身刷题App</title>
   <meta name="description" content="专为青少年与学生定制的全国国家版图知识竞赛刷题与备赛平台，集成官方题库、去重精选、高清识图专项与全彩知识手册。" />
   <link rel="stylesheet" href="app.css" />
@@ -65,7 +65,7 @@
     <section class="control-bar">
       <div class="bank-select-wrapper">
         <label for="bank-select" class="bank-select-label">
-          <span>📚</span> 题库选择：
+          <span aria-hidden="true">📚</span> 题库
         </label>
         <div class="custom-select-container">
           <select id="bank-select" class="custom-select">
@@ -83,20 +83,20 @@
       <!-- 模式选择药丸按钮 -->
       <div class="mode-pills-wrapper">
         <div class="mode-pills">
-          <button class="pill-btn active" data-mode="sequence" onclick="window.AppBridge.switchMode('sequence')">
-            📝 顺序刷题
+          <button class="pill-btn active" data-mode="sequence" aria-label="顺序刷题" onclick="window.AppBridge.switchMode('sequence')">
+            <span aria-hidden="true">📝</span><span class="mode-label-full">顺序刷题</span><span class="mode-label-short">顺序</span>
           </button>
-          <button class="pill-btn" data-mode="random" onclick="window.AppBridge.switchMode('random')">
-            ⚡ 20题速刷
+          <button class="pill-btn" data-mode="random" aria-label="20题速刷" onclick="window.AppBridge.switchMode('random')">
+            <span aria-hidden="true">⚡</span><span class="mode-label-full">20题速刷</span><span class="mode-label-short">速刷</span>
           </button>
-          <button class="pill-btn" data-mode="exam" onclick="window.AppBridge.switchMode('exam')">
-            ⏱️ 全真模考
+          <button class="pill-btn" data-mode="exam" aria-label="全真模考" onclick="window.AppBridge.switchMode('exam')">
+            <span aria-hidden="true">⏱️</span><span class="mode-label-full">全真模考</span><span class="mode-label-short">模考</span>
           </button>
-          <button class="pill-btn" data-mode="mistakes" onclick="window.AppBridge.switchMode('mistakes')">
-            ⚔️ 错题消灭战
+          <button class="pill-btn" data-mode="mistakes" aria-label="错题消灭战" onclick="window.AppBridge.switchMode('mistakes')">
+            <span aria-hidden="true">⚔️</span><span class="mode-label-full">错题消灭战</span><span class="mode-label-short">错题</span>
           </button>
-          <button class="pill-btn" data-mode="favorites" onclick="window.AppBridge.switchMode('favorites')">
-            ⭐ 收藏夹
+          <button class="pill-btn" data-mode="favorites" aria-label="收藏夹" onclick="window.AppBridge.switchMode('favorites')">
+            <span aria-hidden="true">⭐</span><span class="mode-label-full">收藏夹</span><span class="mode-label-short">收藏</span>
           </button>
         </div>
       </div>
@@ -122,16 +122,20 @@
     </article>
 
     <!-- 底部操作导航栏 -->
-    <nav class="bottom-nav">
+    <nav class="bottom-nav" aria-label="题目导航">
+      <div class="navigation-caption">
+        <span>题干左滑下一题 · 右滑上一题</span>
+        <span id="navigation-progress" aria-label="当前题目">0 / 0</span>
+      </div>
       <button class="nav-btn" id="prev-btn" onclick="window.AppBridge.prevQuestion()">
         ⬅ 上一题
       </button>
       <div class="bottom-tools">
         <button class="nav-btn" id="sheet-btn" onclick="window.AppBridge.openQuestionSheet()" title="查看答题卡与快速跳题">
-          📑 答题卡
+          <span aria-hidden="true">📑</span><span>答题卡</span>
         </button>
         <button class="nav-btn" onclick="window.AppBridge.openHandbook(3)" title="查阅知识手册对应章节">
-          🔍 查手册
+          <span aria-hidden="true">🔍</span><span>查手册</span>
         </button>
       </div>
       <button class="nav-btn primary" id="next-btn" onclick="window.AppBridge.nextQuestion()">

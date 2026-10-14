@@ -838,6 +838,10 @@ body {
   font-weight: 700;
 }
 
+.mode-label-short {
+  display: none;
+}
+
 .result-explanation {
   font-size: 0.92rem;
   line-height: 1.6;
@@ -851,6 +855,10 @@ body {
   justify-content: space-between;
   gap: 12px;
   margin-top: 8px;
+}
+
+.navigation-caption {
+  display: none;
 }
 
 .nav-btn {
@@ -1427,13 +1435,13 @@ body {
     font-size: 0.84rem;
   }
 
-  .bottom-nav > div {
+  .bottom-nav > .bottom-tools {
     display: flex;
     gap: 6px;
     flex: 1.6;
   }
 
-  .bottom-nav > div .nav-btn {
+  .bottom-nav > .bottom-tools .nav-btn {
     flex: 1;
     padding: 10px 4px;
     font-size: 0.82rem;
@@ -1533,14 +1541,51 @@ body {
 @media (max-width: 640px) {
   .nav-status-bar .child-chip-btn { flex-shrink: 1; max-width: calc(100% - 200px); }
   .nav-status-bar .sync-badge-btn { max-width: 88px; }
-  .mode-pills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+  .mode-pills { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; }
   .pill-btn { min-width: 0; padding: 9px 4px; font-size: .8rem; justify-content: center; }
+  .mode-label-full { display: none; }
+  .mode-label-short { display: inline; }
+  .bank-select-wrapper { flex-direction: row !important; align-items: center !important; gap: 8px !important; }
+  .bank-select-label { font-size: .82rem; }
+  .custom-select { min-height: 44px; font-size: 16px; padding: 8px; }
   .stats-badges:has(#exam-submit-btn:not([style*="display: none"])) { flex-basis: 100%; }
-  .bottom-nav { display: grid; grid-template-columns: 1fr 1fr; }
-  .bottom-nav > .bottom-tools { grid-column: 1 / -1; grid-row: 2; display: grid; grid-template-columns: 1fr 1fr; }
-  .bottom-nav .nav-btn { width: 100%; min-width: 0; }
   .handbook-controls { flex-wrap: wrap; }
   .handbook-controls .nav-btn { padding: 8px; font-size: .8rem; }
+}
+
+/* 手机/平板切题按钮始终可见，为解析和设备底部安全区留出空间。 */
+@media (max-width: 919px) {
+  .app-container { padding-bottom: calc(112px + env(safe-area-inset-bottom, 0px)); }
+  .question-card { touch-action: pan-y pinch-zoom; }
+  .bottom-nav {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 50;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 6px 8px;
+    margin: 0;
+    padding: 8px max(10px, env(safe-area-inset-right, 0px)) calc(8px + env(safe-area-inset-bottom, 0px)) max(10px, env(safe-area-inset-left, 0px));
+    background: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -4px 16px rgb(0 0 0 / .08);
+  }
+  .navigation-caption {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: .7rem;
+    line-height: 1.4;
+  }
+  #navigation-progress { flex-shrink: 0; font-variant-numeric: tabular-nums; }
+  .bottom-nav .nav-btn { justify-content: center; min-width: 0; min-height: 48px; }
+  .bottom-nav > .bottom-tools { display: flex; gap: 4px; }
+  .bottom-nav > .bottom-tools .nav-btn { flex-direction: column; gap: 0; padding: 4px; width: 44px; font-size: .65rem; }
+  .bottom-tools .nav-btn > span:first-child { font-size: 1rem; }
+  #prev-btn, #next-btn { width: 100%; padding: 12px 6px; font-size: .88rem; }
 }
 
 @media (max-width: 480px) {

@@ -975,6 +975,8 @@
 
     const info = document.getElementById('progress-text');
     if (info) info.textContent = total > 0 ? `${cur} / ${total}` : '0 / 0';
+    const navigationProgress = document.getElementById('navigation-progress');
+    if (navigationProgress) navigationProgress.textContent = total > 0 ? `${cur} / ${total}` : '0 / 0';
 
     // 统计正确与错误
     let correctTotal = 0;
@@ -1204,6 +1206,60 @@
     }
   });
 
+  function scrollToQuestionOnMobile() {
+    if (!window.matchMedia('(max-width: 919px)').matches) return;
+    const card = document.getElementById('question-card-container');
+    if (!card) return;
+    const header = document.querySelector('.navbar');
+    card.style.scrollMarginTop = `${(header?.offsetHeight || 0) + 12}px`;
+    card.scrollIntoView({ block: 'start', behavior: 'auto' });
+  }
+
+  function initQuestionSwipe() {
+    const card = document.getElementById('question-card-container');
+    if (!card) return;
+    let gesture = null;
+    const interactive = 'a, button, input, select, textarea, img, .q-img-wrap, .options-list, .option-item, [role="button"], [contenteditable]';
+    const blocked = () => document.querySelector('.modal-overlay.active') || window.getSelection()?.toString();
+
+    card.addEventListener('touchstart', event => {
+      gesture = null;
+      if (!window.matchMedia('(max-width: 919px)').matches || event.touches.length !== 1 ||
+          blocked() || event.target.closest?.(interactive)) return;
+      const touch = event.touches[0];
+      // 留出浏览器的边缘返回手势，也不把长按选中文字当作切题。
+      if (touch.clientX < 24 || touch.clientX > window.innerWidth - 24) return;
+      gesture = { id: touch.identifier, x: touch.clientX, y: touch.clientY, time: performance.now(),
+        uid: AppState.activeQuestions[AppState.currentIndex]?.uid, bank: AppState.currentBankKey,
+        mode: AppState.currentMode };
+    }, { passive: true });
+
+    card.addEventListener('touchmove', event => {
+      if (!gesture) return;
+      if (event.touches.length !== 1) { gesture = null; return; }
+      const touch = event.touches[0];
+      const dx = Math.abs(touch.clientX - gesture.x);
+      const dy = Math.abs(touch.clientY - gesture.y);
+      if (touch.identifier !== gesture.id || (dy > 24 && dy > dx)) gesture = null;
+    }, { passive: true });
+
+    card.addEventListener('touchcancel', () => { gesture = null; }, { passive: true });
+    card.addEventListener('touchend', event => {
+      const start = gesture;
+      gesture = null;
+      if (!start || event.touches.length || blocked() || !window.matchMedia('(max-width: 919px)').matches ||
+          performance.now() - start.time > 900 || start.bank !== AppState.currentBankKey ||
+          start.mode !== AppState.currentMode || start.uid !== AppState.activeQuestions[AppState.currentIndex]?.uid) return;
+      const touch = Array.from(event.changedTouches).find(point => point.identifier === start.id);
+      if (!touch) return;
+      const dx = touch.clientX - start.x;
+      const dy = Math.abs(touch.clientY - start.y);
+      if (Math.abs(dx) < 64 || dy > 48 || Math.abs(dx) < dy * 1.5) return;
+      if (dx < 0) window.AppBridge.nextQuestion();
+      else window.AppBridge.prevQuestion();
+    }, { passive: true });
+  }
+
   // ==========================================
   // 15. 暴露全局 Bridge 供 HTML 绑定
   // ==========================================
@@ -1258,6 +1314,7 @@
         renderCurrentQuestion();
         updateProgressUI();
         saveSequenceProgress();
+        scrollToQuestionOnMobile();
       }
     },
 
@@ -1268,6 +1325,7 @@
         renderCurrentQuestion();
         updateProgressUI();
         saveSequenceProgress();
+        scrollToQuestionOnMobile();
       }
     },
 
@@ -1279,6 +1337,7 @@
       updateProgressUI();
       saveSequenceProgress();
       window.AppBridge.closeModal('sheet-modal');
+      scrollToQuestionOnMobile();
     },
 
     toggleFavorite(uid) {
@@ -1529,6 +1588,7 @@
     updateBankLabels();
     prepareActiveQuestions();
     updateSyncBadgeUI({ status: 'idle' });
+    initQuestionSwipe();
 
     // 监听云同步事件与档案切换事件
     if (window.CloudSync) {
