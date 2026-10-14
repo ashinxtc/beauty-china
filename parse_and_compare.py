@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Beautiful China - National Territory Knowledge Competition Question Parser & Deduplication Engine (v2)
-Accurately parses 100% of questions across all 4 sources:
+Extracts questions across four sources; the audit pipeline verifies answer keys and quarantines unresolved issues:
 1. 1.版图知识竞赛题库.pdf (小学组)
 2. 2.国家版图知识竞赛题库.pdf (中学组)
 3. 历年真题模拟汇编.pdf (历年真题)
@@ -16,7 +16,7 @@ import fitz
 import docx
 from collections import defaultdict
 
-BASE_DIR = r"D:\AntigravityworkSpace\beautifulChina"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ASSETS_IMG_DIR = os.path.join(BASE_DIR, "assets", "images")
 os.makedirs(ASSETS_IMG_DIR, exist_ok=True)
 
@@ -416,7 +416,7 @@ def parse_docx():
         blip_ids = re.findall(r'r:embed="([^"]+)"', p_xml)
         para_images = [rel_id_to_target[bid] for bid in blip_ids if bid in rel_id_to_target]
 
-        m = re.match(r"^(\d+)[\.、\uff0e\s]+(.*)", t)
+        m = re.match(r"^(\d+)[\.、\uff0e\s]+(.*)", t, re.S)
         if m and (t.endswith("（）。") or t.endswith("（）") or "的是" in t or "下列" in t or "关于" in t or "我国" in t or len(t) > 5):
             q_num = int(m.group(1))
             if current_q:
@@ -439,7 +439,7 @@ def parse_docx():
             if not t:
                 continue
             
-            opt_m = re.match(r"^([A-D])[\.、\uff0e\s]*(.*)", t)
+            opt_m = re.match(r"^([A-F])[\.、\uff0e\s]+(.*)", t, re.S)
             if opt_m:
                 current_q["options"].append(f"{opt_m.group(1)}. {opt_m.group(2).strip()}")
             else:
@@ -463,120 +463,10 @@ def parse_docx():
 # 5. Deduplication and Cross-Comparison
 # ==========================================
 def compare_and_deduplicate(all_banks):
-    print("\n==========================================")
-    print("Executing Question Deduplication & Cross-Comparison...")
-    print("==========================================")
+    # Reuse the source-checked importer, option-content matching and complete-question identity.
+    from audit_questions import rebuild_question_bank
+    return rebuild_question_bank(all_banks, BASE_DIR)["summary"]
 
-    counts = {name: len(bank) for name, bank in all_banks.items()}
-    total_raw = sum(counts.values())
-
-    norm_index = defaultdict(list)
-    for bank_name, bank in all_banks.items():
-        for q in bank:
-            norm_k = normalize_text(q["title"])
-            if len(norm_k) >= 5:
-                norm_index[norm_k].append((bank_name, q))
-
-    # Overlap matrix
-    overlap_matrix = defaultdict(lambda: defaultdict(int))
-    duplicate_groups = []
-
-    for norm_k, items in norm_index.items():
-        if len(items) > 1:
-            duplicate_groups.append(items)
-            sources = list(set([item[0] for item in items]))
-            for i in range(len(sources)):
-                for j in range(i + 1, len(sources)):
-                    overlap_matrix[sources[i]][sources[j]] += 1
-                    overlap_matrix[sources[j]][sources[i]] += 1
-
-    # Answer propagation
-    docx_propagated_count = 0
-    docx_bank = all_banks["2025大赛题库"]
-    for q in docx_bank:
-        norm_k = normalize_text(q["title"])
-        if not q["answer"] and norm_k in norm_index:
-            for source_name, matched_q in norm_index[norm_k]:
-                if source_name != "2025大赛题库" and matched_q["answer"]:
-                    q["answer"] = matched_q["answer"]
-                    q["answer_source"] = f"匹配自{source_name} (第{matched_q['num']}题)"
-                    docx_propagated_count += 1
-                    break
-
-    # Build Unified Question Bank
-    unified_questions = []
-    seen_norm = set()
-    unified_id = 1
-
-    bank_order = ["小学组样题库", "中学组样题库", "历年真题汇编", "2025大赛题库"]
-    for bank_name in bank_order:
-        for q in all_banks[bank_name]:
-            norm_k = normalize_text(q["title"])
-            if norm_k in seen_norm:
-                for uq in unified_questions:
-                    if normalize_text(uq["question"]) == norm_k:
-                        if bank_name not in uq["sources"]:
-                            uq["sources"].append(bank_name)
-                        if not uq["answer"] and q["answer"]:
-                            uq["answer"] = q["answer"]
-                        if not uq["images"] and q["images"]:
-                            uq["images"] = q["images"]
-                        break
-            else:
-                seen_norm.add(norm_k)
-                unified_q = {
-                    "uid": f"Q_{unified_id:04d}",
-                    "question": q["title"],
-                    "options": q["options"],
-                    "answer": q["answer"],
-                    "type": q["type"],
-                    "images": q["images"],
-                    "sources": [bank_name],
-                    "original_id": q["id"]
-                }
-                unified_questions.append(unified_q)
-                unified_id += 1
-
-    # Export Handbook pages to images for the in-app reader
-    handbook_pdf_path = os.path.join(BASE_DIR, "国家版图知识手册.pdf")
-    handbook_dir = os.path.join(BASE_DIR, "assets", "handbook")
-    os.makedirs(handbook_dir, exist_ok=True)
-    hb_doc = fitz.open(handbook_pdf_path)
-    print(f"Exporting Handbook pages ({len(hb_doc)} pages) to assets/handbook/...")
-    handbook_pages = []
-    for p_idx in range(len(hb_doc)):
-        img_filename = f"handbook_p{p_idx+1:02d}.jpg"
-        img_path = os.path.join(handbook_dir, img_filename)
-        if not os.path.exists(img_path):
-            pix = hb_doc[p_idx].get_pixmap(dpi=150)
-            pix.save(img_path)
-        handbook_pages.append(f"assets/handbook/{img_filename}")
-
-    # Generate JSON outputs
-    with open(os.path.join(BASE_DIR, "unified_questions.json"), "w", encoding="utf-8") as f:
-        json.dump(unified_questions, f, ensure_ascii=False, indent=2)
-
-    with open(os.path.join(BASE_DIR, "raw_banks.json"), "w", encoding="utf-8") as f:
-        json.dump(all_banks, f, ensure_ascii=False, indent=2)
-
-    summary = {
-        "total_raw": total_raw,
-        "counts_by_bank": counts,
-        "total_unique": len(unified_questions),
-        "duplicates_removed": total_raw - len(unified_questions),
-        "duplicate_rate": f"{((total_raw - len(unified_questions))/total_raw)*100:.1f}%",
-        "multi_source_high_frequency": sum(1 for q in unified_questions if len(q["sources"]) > 1),
-        "questions_with_images": sum(1 for q in unified_questions if q["images"]),
-        "overlap_matrix": {b1: dict(overlap_matrix[b1]) for b1 in bank_order},
-        "docx_propagated_answers": docx_propagated_count,
-        "handbook_pages_count": len(handbook_pages)
-    }
-
-    with open(os.path.join(BASE_DIR, "deduplication_summary.json"), "w", encoding="utf-8") as f:
-        json.dump(summary, f, ensure_ascii=False, indent=2)
-
-    print("\nExtraction & Deduplication Completed Successfully!")
-    return summary
 
 def main():
     q_elem = parse_pdf1()

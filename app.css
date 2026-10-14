@@ -1494,3 +1494,59 @@ body {
     padding: 8px;
   }
 }
+
+/* Keep controls and source tags aligned when labels wrap or screens narrow. */
+.nav-brand { flex-shrink: 1; }
+.nav-status-bar { min-width: 0; }
+.mode-pills { flex-wrap: wrap; }
+.q-meta-row { align-items: flex-start; flex-wrap: nowrap; }
+.q-tags { flex: 1; min-width: 0; }
+.q-source-badge { max-width: 100%; overflow-wrap: anywhere; }
+.q-meta-row > button { flex-shrink: 0; }
+.stats-badges { flex-wrap: wrap; justify-content: flex-end; }
+.progress-panel { flex-wrap: wrap; }
+.progress-track { min-width: 32px; }
+.bottom-tools { display: flex; gap: 8px; min-width: 0; }
+.modal-title { min-width: 0; overflow-wrap: anywhere; }
+.modal-close-btn { flex-shrink: 0; }
+.selection-order { flex-shrink: 0; font-size: .75rem; color: var(--primary); }
+.answer-note { margin-top: 10px; white-space: pre-line; }
+#child-chip-name, #sync-status-text {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#child-chip-name { max-width: 160px; }
+.child-chip-btn { max-width: 240px; }
+.sync-badge-btn { max-width: 130px; }
+.child-card-left { min-width: 0; flex: 1; }
+.child-card-left > div:last-child { min-width: 0; }
+.child-avatar-circle { flex-shrink: 0; }
+.child-info-name { overflow-wrap: anywhere; }
+.child-profile-card > button { flex-shrink: 0; }
+.stats-summary-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; text-align: center; }
+.stats-metric { background: var(--bg-main); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px; }
+.stats-medals-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.stats-actions { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 10px; border-top: 1px solid var(--border-color); }
+
+@media (max-width: 640px) {
+  .nav-status-bar .child-chip-btn { flex-shrink: 1; max-width: calc(100% - 200px); }
+  .nav-status-bar .sync-badge-btn { max-width: 88px; }
+  .mode-pills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+  .pill-btn { min-width: 0; padding: 9px 4px; font-size: .8rem; justify-content: center; }
+  .stats-badges:has(#exam-submit-btn:not([style*="display: none"])) { flex-basis: 100%; }
+  .bottom-nav { display: grid; grid-template-columns: 1fr 1fr; }
+  .bottom-nav > .bottom-tools { grid-column: 1 / -1; grid-row: 2; display: grid; grid-template-columns: 1fr 1fr; }
+  .bottom-nav .nav-btn { width: 100%; min-width: 0; }
+  .handbook-controls { flex-wrap: wrap; }
+  .handbook-controls .nav-btn { padding: 8px; font-size: .8rem; }
+}
+
+@media (max-width: 480px) {
+  .stats-summary-grid { gap: 8px; }
+  .stats-metric { padding: 10px 6px; }
+  .stats-medals-grid { grid-template-columns: minmax(0, 1fr); }
+  .stats-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stats-actions .nav-btn { min-width: 0; padding: 10px 6px; font-size: .85rem; justify-content: center; }
+}

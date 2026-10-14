@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>美丽中国·版图小达人 - 全国国家版图知识竞赛随身刷题App</title>
   <meta name="description" content="专为青少年与学生定制的全国国家版图知识竞赛刷题与备赛平台，集成官方题库、去重精选、高清识图专项与全彩知识手册。" />
   <link rel="stylesheet" href="app.css" />
@@ -69,13 +69,13 @@
         </label>
         <div class="custom-select-container">
           <select id="bank-select" class="custom-select">
-            <option value="unified">⭐ 全库去重纯享版 (1521题·高性价比·消除34%重复)</option>
-            <option value="elem">🧒 小学组官方样题 (267题·全标准答案)</option>
-            <option value="middle">🧑 中学组官方样题 (268题·全标准答案)</option>
-            <option value="history">📜 历年真题模拟汇编 (632题·全标准答案)</option>
-            <option value="contest25">🏆 2025大赛新赛题 (1143题·实战冲刺)</option>
-            <option value="images">🗺️ 地图识图专项攻坚 (247题·配图大题)</option>
-            <option value="high_freq">🔥 多题库高频必考核心 (218题·必刷)</option>
+            <option value="unified">⭐ 全库精选</option>
+            <option value="elem">🧒 小学组官方样题</option>
+            <option value="middle">🧑 中学组官方样题</option>
+            <option value="history">📜 历年真题模拟汇编</option>
+            <option value="contest25">🏆 2025大赛题库</option>
+            <option value="images">🗺️ 地图识图专项</option>
+            <option value="high_freq">🔥 多题库高频题</option>
           </select>
         </div>
       </div>
@@ -110,6 +110,7 @@
       </div>
       <div class="stats-badges">
         <span id="exam-timer-display" style="display: none; color: var(--danger); font-weight: 800;">⏱️ 30:00</span>
+        <button class="nav-btn primary" id="exam-submit-btn" style="display: none;" onclick="window.AppBridge.submitExam()">提交试卷</button>
         <span class="badge-tag correct" id="correct-count-badge" title="答对总数">✓ 0</span>
         <span class="badge-tag wrong" id="wrong-count-badge" title="答错总数">✗ 0</span>
       </div>
@@ -125,7 +126,7 @@
       <button class="nav-btn" id="prev-btn" onclick="window.AppBridge.prevQuestion()">
         ⬅ 上一题
       </button>
-      <div style="display: flex; gap: 8px;">
+      <div class="bottom-tools">
         <button class="nav-btn" id="sheet-btn" onclick="window.AppBridge.openQuestionSheet()" title="查看答题卡与快速跳题">
           📑 答题卡
         </button>
@@ -228,6 +229,21 @@
   </div>
 
   <!-- ==========================================
+       模态框 5：学情看板与成就徽章
+       ========================================== -->
+  <div class="modal-overlay" id="stats-modal" onclick="if(event.target===this) window.AppBridge.closeModal('stats-modal')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">🏆 学情看板与备赛勋章</div>
+        <button class="modal-close-btn" onclick="window.AppBridge.closeModal('stats-modal')">×</button>
+      </div>
+      <div class="modal-body" id="stats-modal-content">
+        <!-- 动态生成当前孩子的学情与勋章 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
        模态框 6：多孩子档案管理与切换
        ========================================== -->
   <div class="modal-overlay" id="child-modal" onclick="if(event.target===this) window.AppBridge.closeModal('child-modal')">
@@ -321,7 +337,7 @@
             ⬆️ 上传覆盖云端
           </button>
           <button class="nav-btn" onclick="window.AppBridge.pullFromCloud()" style="justify-content: center; font-size: 0.88rem; padding: 12px 6px;">
-            ⬇️ 从云端拉取覆盖
+            ⬇️ 从云端拉取合并
           </button>
         </div>
 

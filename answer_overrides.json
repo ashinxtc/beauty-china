@@ -1,0 +1,218 @@
+{
+  "contest25_0326": {
+    "answer": "B",
+    "expected_question": "我国在海上与（）个国家相邻或相望。",
+    "expected_options": [
+      "A. 9",
+      "B. 8",
+      "C. 7",
+      "D. 6"
+    ],
+    "reference_id": "history_520",
+    "reason": "已核对原文件题干与正确选项内容，按本题选项位置映射，不复制参考题的字母。"
+  },
+  "contest25_0474": {
+    "answer": "A",
+    "expected_question": "现有三幅不同比例尺的地图a、b、c，其比例尺分别为1:1万、1:5万、1:10万。下列说法正确的是（）。",
+    "expected_options": [
+      "A. 图a的比例尺最大。",
+      "B. 图b的比例尺最大",
+      "C. 图c的比例尺最大"
+    ],
+    "reference_id": "elem_013",
+    "reason": "已核对原文件题干与正确选项内容，按本题选项位置映射，不复制参考题的字母。",
+    "reviewed_content_variation": true
+  },
+  "contest25_1029": {
+    "answer": "B",
+    "expected_question": "南海诸岛作为海南省地图的附图时，附图名称为（   ）。",
+    "expected_options": [
+      "A. 附图",
+      "B. 海南省全图",
+      "C. 海南省附图",
+      "D. 南海诸岛附图"
+    ],
+    "reference_id": "history_027",
+    "reason": "已核对原文件题干与正确选项内容，按本题选项位置映射，不复制参考题的字母。"
+  },
+  "contest25_0125": {
+    "answer": "D",
+    "expected_question": "我国有（）个自治区。",
+    "expected_options": [
+      "A. 2",
+      "B. 3",
+      "C. 4",
+      "D. 5"
+    ],
+    "reference_id": "elem_026",
+    "reason": "已核对原文件，题干仅为同一事实的改写，选项内容一致；按正确选项内容映射。"
+  },
+  "contest25_0147": {
+    "answer": "A",
+    "expected_question": "京杭大运河是世界上开凿最早、最长的人工运河，全长1794公里，历史上起过沟通南北交通的重要作用，现在仍发挥着通航等作用。它经过了（）个省级行政区。",
+    "expected_options": [
+      "A. 6",
+      "B. 5",
+      "C. 4",
+      "D. 8"
+    ],
+    "reference_id": "history_162",
+    "reason": "已核对原文件，题干仅为同一事实的改写，选项内容一致；按正确选项内容映射。"
+  },
+  "contest25_0348": {
+    "answer": "A",
+    "expected_question": "国家版图最主要的表现形式是（）。",
+    "expected_options": [
+      "A. 地图",
+      "B. 文字",
+      "C. 图画",
+      "D. 影像"
+    ],
+    "reference_id": "elem_136",
+    "reason": "已核对原文件，题干仅为同一事实的改写，选项内容一致；按正确选项内容映射。"
+  },
+  "contest25_0437": {
+    "answer": "B",
+    "expected_question": "我国横跨（）个地理时区？",
+    "expected_options": [
+      "A. 4个",
+      "B. 5个",
+      "C. 6个",
+      "D. 7个"
+    ],
+    "reference_id": "elem_104",
+    "reason": "已核对原文件，题干仅为同一事实的改写，选项内容一致；按正确选项内容映射。"
+  },
+  "contest25_0441": {
+    "answer": "D",
+    "expected_question": "下列海湾中，位于南海的是（）。",
+    "expected_options": [
+      "A. 辽东湾",
+      "B. 杭州湾",
+      "C. 胶州湾",
+      "D. 北部湾"
+    ],
+    "reference_id": "elem_010",
+    "reason": "已核对原文件，题干仅为同一事实的改写，选项内容一致；按正确选项内容映射。"
+  },
+  "contest25_0526": {
+    "answer": "C",
+    "expected_question": "广东省全图必须包括（）。",
+    "expected_options": [
+      "A. 中沙群岛",
+      "B. 西沙群岛",
+      "C. 东沙群岛",
+      "D. 南沙群岛"
+    ],
+    "reference_id": "elem_235",
+    "reason": "已核对原文件，题干仅为同一事实的改写，选项内容一致；按正确选项内容映射。"
+  },
+  "contest25_0678": {
+    "answer": "A",
+    "expected_question": "我国省（区）中与陆地邻国接壤最多的是（）。",
+    "expected_options": [
+      "A. 新疆维吾尔自治区",
+      "B. 西藏自治区",
+      "C. 内蒙古自治区",
+      "D. 云南省"
+    ],
+    "reference_id": "middle_166",
+    "reason": "已核对原文件，题干仅为同一事实的改写，选项内容一致；按正确选项内容映射。"
+  },
+  "contest25_0686": {
+    "answer": "C",
+    "expected_question": "西藏地区第一次归入中原王朝版图是在哪个朝代？（）",
+    "expected_options": [
+      "A. 唐朝",
+      "B. 宋朝",
+      "C. 元朝",
+      "D. 明朝"
+    ],
+    "reference_id": "history_330",
+    "reason": "已核对原文件，题干仅为同一事实的改写，选项内容一致；按正确选项内容映射。"
+  },
+  "contest25_0802": {
+    "answer": "C",
+    "expected_question": "领陆是指国家主权管辖下的陆地及其底土，包括边界以内的大陆和岛屿，是国家领土的基本组成部分。选项中说法错误的是（）。",
+    "expected_options": [
+      "A. 领水依附于领陆",
+      "B. 领空又依附于领陆和领水",
+      "C. 世界上有的国家没有领陆。",
+      "D. 如果领陆发生变动，领水和领空也将随之变动。"
+    ],
+    "reference_id": "history_189",
+    "reason": "已核对原文件，题干仅为同一事实的改写，选项内容一致；按正确选项内容映射。"
+  },
+  "contest25_1008": {
+    "answer": "B",
+    "expected_question": "根据《地图管理条例》，（）以上人民政府测绘地理信息行政主管部门应当根据国家有关标准和技术规范，加强地图质量监督管理。",
+    "expected_options": [
+      "A. 乡级",
+      "B. 县级",
+      "C. 市级",
+      "D. 省级"
+    ],
+    "reference_id": "middle_257",
+    "reason": "已核对原文件，题干仅为同一事实的改写，选项内容一致；按正确选项内容映射。"
+  },
+  "contest25_1023": {
+    "answer": "D",
+    "expected_question": "在中国历史上，“国家大一统”的观念有着悠久的历史、深厚的基础，这种国家大一统局面的形成始于（）。",
+    "expected_options": [
+      "A. 炎黄部落的形成",
+      "B. 尧舜时期“天下为公”的传说",
+      "C. 儒家思想的影响",
+      "D. 秦、汉巩固统一国家的措施"
+    ],
+    "reference_id": "history_573",
+    "reason": "已核对原文件，题干仅为同一事实的改写，选项内容一致；按正确选项内容映射。"
+  },
+  "contest25_1094": {
+    "answer": "C",
+    "expected_question": "七朝古都、牡丹之乡洛阳位于（）。",
+    "expected_options": [
+      "A. 江苏",
+      "B. 黑龙江",
+      "C. 河南",
+      "D. 陕西"
+    ],
+    "reference_id": "history_249",
+    "reason": "已核对原文件，题干仅为同一事实的改写，选项内容一致；按正确选项内容映射。"
+  },
+  "contest25_1103": {
+    "answer": "A",
+    "expected_question": "我国陆地最低点为（），其海拔高程约为-154米。",
+    "expected_options": [
+      "A. 新疆吐鲁番盆地中的艾丁湖洼地",
+      "B. 柴达木盆地",
+      "C. 塔里木盆地",
+      "D. 四川盆地"
+    ],
+    "reference_id": "history_048",
+    "reason": "已核对原文件，题干仅为同一事实的改写，选项内容一致；按正确选项内容映射。"
+  },
+  "contest25_0044": {
+    "answer": "C",
+    "expected_question": "国家版图的正确含义是。（）",
+    "expected_options": [
+      "A. 一个国家的户籍地图",
+      "B. 用铜版制成的地图",
+      "C. 一个国家行使主权的疆域",
+      "D. 一个国家行政管理的区域"
+    ],
+    "reference_id": "elem_001",
+    "reason": "已核对原文件的相同题干和正确选项内容；其余选项的增补或文字差异不改变本题正确选项。"
+  },
+  "contest25_0292": {
+    "answer": "C",
+    "expected_question": "（）位于中国大陆海岸线最西南端，东南濒北部湾，西南与越南接壤，是广西以及中国大西南通往东南亚最便捷的海陆通道，也是中国与越南唯一海陆相连的口岸。",
+    "expected_options": [
+      "A. 霍尔果斯口岸",
+      "B. 凭祥友谊关口岸",
+      "C. 东兴口岸",
+      "D. 罗湖口岸"
+    ],
+    "reference_id": "history_174",
+    "reason": "已核对原文件的相同题干和正确选项内容；其余选项的增补或文字差异不改变本题正确选项。"
+  }
+}

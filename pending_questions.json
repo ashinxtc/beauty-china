@@ -1,0 +1,2935 @@
+[
+  {
+    "answer": "",
+    "answer_status": "source_conflict",
+    "conflicting_answers": [
+      {
+        "answer": "A",
+        "id": "elem_115",
+        "options": [
+          "A.  西汉",
+          "B. 三国",
+          "C. 唐朝",
+          "D.  宋朝"
+        ],
+        "reference": {
+          "answer_page": 45,
+          "file": "1.版图知识竞赛题库.pdf",
+          "page": 19,
+          "question_number": 115
+        }
+      },
+      {
+        "answer": "B",
+        "id": "history_286",
+        "options": [
+          "A. 西汉",
+          "B. 三国",
+          "C. 唐朝",
+          "D. 宋朝"
+        ],
+        "reference": {
+          "file": "历年真题模拟汇编.pdf",
+          "page": 48,
+          "question_number": 286
+        }
+      },
+      {
+        "answer": "B",
+        "id": "history_294",
+        "options": [
+          "A. 西汉",
+          "B. 三国",
+          "C. 唐朝",
+          "D. 宋朝"
+        ],
+        "reference": {
+          "file": "历年真题模拟汇编.pdf",
+          "page": 49,
+          "question_number": 294
+        }
+      }
+    ],
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A.  西汉",
+      "B. 三国",
+      "C. 唐朝",
+      "D.  宋朝"
+    ],
+    "original_id": "elem_115",
+    "pending_reason": "原始资料对同题给出不同答案，需要核验",
+    "question": "有文献记载的大陆与台湾的第一次接触是在( )时期。",
+    "scorable": false,
+    "source_ids": [
+      "elem_115",
+      "history_286",
+      "history_294"
+    ],
+    "source_reference": {
+      "answer_page": 45,
+      "file": "1.版图知识竞赛题库.pdf",
+      "page": 19,
+      "question_number": 115
+    },
+    "sources": [
+      "小学组样题库",
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0114"
+  },
+  {
+    "answer": "",
+    "answer_status": "source_conflict",
+    "conflicting_answers": [
+      {
+        "answer": "B",
+        "id": "elem_159",
+        "options": [
+          "A. 黄河",
+          "B.  太行山",
+          "C. 长江",
+          "D. 长城"
+        ],
+        "reference": {
+          "answer_page": 45,
+          "file": "1.版图知识竞赛题库.pdf",
+          "page": 25,
+          "question_number": 159
+        }
+      },
+      {
+        "answer": "A",
+        "id": "history_492",
+        "options": [
+          "A. 黄河",
+          "B. 太行山",
+          "C. 长江",
+          "D. 长城"
+        ],
+        "reference": {
+          "file": "历年真题模拟汇编.pdf",
+          "page": 82,
+          "question_number": 492
+        }
+      }
+    ],
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 黄河",
+      "B.  太行山",
+      "C. 长江",
+      "D. 长城"
+    ],
+    "original_id": "elem_159",
+    "pending_reason": "原始资料对同题给出不同答案，需要核验",
+    "question": "陕西省与山西省的界线主要是( )",
+    "scorable": false,
+    "source_ids": [
+      "elem_159",
+      "history_492"
+    ],
+    "source_reference": {
+      "answer_page": 45,
+      "file": "1.版图知识竞赛题库.pdf",
+      "page": 25,
+      "question_number": 159
+    },
+    "sources": [
+      "小学组样题库",
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0156"
+  },
+  {
+    "answer": "",
+    "answer_status": "source_conflict",
+    "conflicting_answers": [
+      {
+        "answer": "D",
+        "id": "elem_236",
+        "options": [
+          "A. 澳门",
+          "B. 澳门城区图",
+          "C. 澳门半岛",
+          "D. 澳门特别行政区"
+        ],
+        "reference": {
+          "answer_page": 45,
+          "file": "1.版图知识竞赛题库.pdf",
+          "page": 38,
+          "question_number": 236
+        }
+      },
+      {
+        "answer": "D",
+        "id": "middle_201",
+        "options": [
+          "A. 澳门",
+          "B.澳门城区图",
+          "C.澳门半岛",
+          "D.澳门特别行政区"
+        ],
+        "reference": {
+          "answer_page": 18,
+          "file": "2.国家版图知识竞赛题库.pdf",
+          "page": 12,
+          "question_number": 201
+        }
+      },
+      {
+        "answer": "C",
+        "id": "history_415",
+        "options": [
+          "A. 澳门",
+          "B. 澳门城区图",
+          "C. 澳门半岛",
+          "D. 澳门特别行政区"
+        ],
+        "reference": {
+          "file": "历年真题模拟汇编.pdf",
+          "page": 69,
+          "question_number": 415
+        }
+      }
+    ],
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 澳门",
+      "B. 澳门城区图",
+      "C. 澳门半岛",
+      "D. 澳门特别行政区"
+    ],
+    "original_id": "elem_236",
+    "pending_reason": "原始资料对同题给出不同答案，需要核验",
+    "question": "澳门城市地图图名应称( )",
+    "scorable": false,
+    "source_ids": [
+      "elem_236",
+      "middle_201",
+      "history_415"
+    ],
+    "source_reference": {
+      "answer_page": 45,
+      "file": "1.版图知识竞赛题库.pdf",
+      "page": 38,
+      "question_number": 236
+    },
+    "sources": [
+      "小学组样题库",
+      "中学组样题库",
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0219"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 领海",
+      "B. 领陆",
+      "C. 领空",
+      "D. 领水"
+    ],
+    "original_id": "history_023",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "国家领土是国家形式主权的空间，领土包括领陆、领水和领空。下图中的A 表示的是 （）",
+    "scorable": false,
+    "source_ids": [
+      "history_023"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 4,
+      "question_number": 23
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0327"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 白银",
+      "B. 定西",
+      "C. 武威",
+      "D. 张掖"
+    ],
+    "original_id": "history_032",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下列卫星照片表示的是甘肃省的哪个市州？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_032"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 6,
+      "question_number": 32
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0336"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 一",
+      "B. 二",
+      "C. 三",
+      "D. 四"
+    ],
+    "original_id": "history_044",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "如图A 所示的岛屿是我国第（）大岛。",
+    "scorable": false,
+    "source_ids": [
+      "history_044"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 8,
+      "question_number": 44
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0345"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 江苏",
+      "B. 黑龙江",
+      "C. 河南",
+      "D. 河北"
+    ],
+    "original_id": "history_060",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下面的卫星图片表示的是我国某个省的轮廓，请问它表示的是哪个省？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_060"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 10,
+      "question_number": 60
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0355"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 华山",
+      "B. 泰山",
+      "C. 恒山",
+      "D. 衡山"
+    ],
+    "original_id": "history_068",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图表示的是我国“五岳”之中的哪一座？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_068"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 12,
+      "question_number": 68
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0361"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 武威市",
+      "B. 张掖市",
+      "C. 金昌市",
+      "D. 嘉峪关市"
+    ],
+    "original_id": "history_073",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是“七一”冰川，它是由中国科学院兰州分院的科技工作者和原苏联冰川学专家于 1958 年7 月1 日发现，并以发现日期命名的一座高原冰川，位于祁连山腹地，是整个亚洲地区距 离城市最近的可游览冰川。请问是哪座城市距离它最近？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_073"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 12,
+      "question_number": 73
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0362"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 内水",
+      "B. 领海",
+      "C. 毗连区",
+      "D. 专属经济区"
+    ],
+    "original_id": "history_088",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国主张管辖的海域空间结构示意图。据此回答以下6 道题。 请问上图中C 指的 是什么？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_088"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 15,
+      "question_number": 88
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0372"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 荆州",
+      "B. 襄阳",
+      "C. 洛阳",
+      "D. 开封"
+    ],
+    "original_id": "history_095",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国中部某历史名城的卫星照片，请问这是哪座城市？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_095"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 16,
+      "question_number": 95
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0378"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 领空",
+      "B. 领海",
+      "C. 领水",
+      "D. 领土"
+    ],
+    "original_id": "history_120",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国主张管辖的海域空间结构示意图。据此回答以下6 道题。 请问图中A 指的 是什么？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_120"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 20,
+      "question_number": 120
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0394"
+  },
+  {
+    "answer": "",
+    "answer_status": "invalid_options",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 石羊河、疏勒河、黑河",
+      "B. 石羊河、黑河、黄河",
+      "C. 疏勒河、黑河、黄河",
+      "D. 石羊河、黑河、黄河"
+    ],
+    "original_id": "history_130",
+    "pending_reason": "题目选项不完整或标号异常，需要核验",
+    "question": "河西走廊是中国内地通往新疆的要道，其内包括哪些水系（）",
+    "scorable": false,
+    "source_ids": [
+      "history_130"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 22,
+      "question_number": 130
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0400"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 大陆架",
+      "B. 领海",
+      "C. 毗连区",
+      "D. 专属经济区"
+    ],
+    "original_id": "history_139",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国主张管辖的海域空间结构示意图。据此回答以下6 道题。 请问上图中D 指 的是什么？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_139"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 23,
+      "question_number": 139
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0407"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 领空",
+      "B. 领海",
+      "C. 毗连区",
+      "D. 领土"
+    ],
+    "original_id": "history_149",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国主张管辖的海域空间结构示意图。据此回答以下6 道题。 请问上图中B 指 的是什么？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_149"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 25,
+      "question_number": 149
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0414"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 乐山大佛",
+      "B. 麦积山",
+      "C. 秦陵兵马俑",
+      "D. 敦煌莫高窟"
+    ],
+    "original_id": "history_202",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是位于河西走廊北部著名的旅游景点，请问它是？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_202"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 34,
+      "question_number": 202
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0449"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 塔里木盆地",
+      "B. 柴达木盆地",
+      "C. 准噶尔盆地",
+      "D. 四川盆地"
+    ],
+    "original_id": "history_203",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下面的卫星照片表示的是我国的某盆地，请问它是哪个盆地？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_203"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 34,
+      "question_number": 203
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0450"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 北京",
+      "B. 重庆",
+      "C. 天津",
+      "D. 上海"
+    ],
+    "original_id": "history_218",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国某个直辖市城区的卫星照片，请问这是哪座城市？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_218"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 37,
+      "question_number": 218
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0462"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 胶州湾",
+      "B. 温州湾",
+      "C. 杭州湾",
+      "D. 长江口"
+    ],
+    "original_id": "history_272",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图中A 为钱塘江，则B 为（）",
+    "scorable": false,
+    "source_ids": [
+      "history_272"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 46,
+      "question_number": 272
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0495"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 黄山",
+      "B. 泰山",
+      "C. 华山",
+      "D. 天山"
+    ],
+    "original_id": "history_321",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图表示的是我国的一座名山，它的名称是（）",
+    "scorable": false,
+    "source_ids": [
+      "history_321"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 54,
+      "question_number": 321
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0516"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 辽宁省",
+      "B. 青海省",
+      "C. 安徽省",
+      "D. 甘肃省"
+    ],
+    "original_id": "history_373",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国哪个省的轮廓图？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_373"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 62,
+      "question_number": 373
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0549"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 武汉",
+      "B. 兰州",
+      "C. 长沙",
+      "D. 银川"
+    ],
+    "original_id": "history_386",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下列卫星照片表示的是我国哪个省会城市？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_386"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 64,
+      "question_number": 386
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0558"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 牡丹",
+      "B. 芍药",
+      "C. 紫荆花",
+      "D. 莲花"
+    ],
+    "original_id": "history_390",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图所示雕塑是国务院送给澳门特别行政区的礼物。请问澳门的市花是什么？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_390"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 65,
+      "question_number": 390
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0560"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 内水",
+      "B. 领海",
+      "C. 毗连区",
+      "D. 专属经济区"
+    ],
+    "original_id": "history_395",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国主张管辖的海域空间结构示意图。据此回答以下6 道题。 请问上图中E 指 的是什么？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_395"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 66,
+      "question_number": 395
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0561"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 内水",
+      "B. 领陆",
+      "C. 领海",
+      "D. 专属经济区"
+    ],
+    "original_id": "history_420",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国主张管辖的海域空间结构示意图。据此回答以下6 道题。 请问上图中F 指 的是什么？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_420"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 70,
+      "question_number": 420
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0571"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 图中的图案是动态莲花",
+      "B. 红旗代表中华人民共和国",
+      "C. 花蕊上的五颗星象征香港同胞心中热爱祖国",
+      "D. 红白两色体现了“一国两制”精神"
+    ],
+    "original_id": "history_574",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是香港特别行政区区旗，下面的说法不正确的是（）",
+    "scorable": false,
+    "source_ids": [
+      "history_574"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 95,
+      "question_number": 574
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_0638"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "按题目沿用的2003年旧规定口径，南海断续线为9段；不能把南海段数与中国全图包含东海有关线段的总数混同。2023年规范未直接写出9或10这一数值。本题仅保留旧题参考答法，不称为现行统一段数要求。",
+    "answer_status": "review_pending",
+    "images": [
+      "assets/images/docx_image1.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 7",
+      "B. 8",
+      "C. 9",
+      "D. 10"
+    ],
+    "original_id": "contest25_0002",
+    "pending_reason": "按题目沿用的2003年旧规定口径，南海断续线为9段；不能把南海段数与中国全图包含东海有关线段的总数混同。2023年规范未直接写出9或10这一数值。本题仅保留旧题参考答法，不称为现行统一段数要求。",
+    "question": "在地图上表示南海诸岛时，应注意南海断续线用（）段线表示，其中有弧线也有直线。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0002",
+      "contest25_1085",
+      "contest25_1140"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 2
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_0658"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "分区设色最直接对应“直观表示”。但分界线也能区分政区，且原题末尾多出括号；B是按常见单选命题意图的拟答，不能仅凭题面彻底排除AB口径。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 分界线",
+      "B. 颜色",
+      "C. 政府驻地",
+      "D. 地名"
+    ],
+    "original_id": "contest25_0014",
+    "pending_reason": "分区设色最直接对应“直观表示”。但分界线也能区分政区，且原题末尾多出括号；B是按常见单选命题意图的拟答，不能仅凭题面彻底排除AB口径。",
+    "question": "在世界或国家政区图上，不同行政区域是通过（）直观表示的（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0014"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 14
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_0669"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "按题庫拟答选C。严格说应为依法取得相应测绘资质；“申请”不等于取得，且服务类型与资质适用范围须依规定判断。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 互联网地图服务资质单位可以提供境外互联网地图服务的链接",
+      "B. 互联网地图服务资质单位可以在互联网上登载各种实景影像地图",
+      "C. 未申请互联网地图服务资质的单位一律不得从事互联网地图服务",
+      "D. 有外资进入的互联网地图服务资质单位，应按照《地图审核管理规定》重新申请资质"
+    ],
+    "original_id": "contest25_0027",
+    "pending_reason": "按题庫拟答选C。严格说应为依法取得相应测绘资质；“申请”不等于取得，且服务类型与资质适用范围须依规定判断。",
+    "question": "下列有关互联网地图服务的说法正确的是（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0027"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 27
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_0682"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "拟答B，指宝鸡青铜器博物院。题干“唯一”未限定类别与时间，不应据此认定全国没有其他青铜器专题博物馆。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 西安市",
+      "B. 宝鸡市",
+      "C. 银川市",
+      "D. 郑州市"
+    ],
+    "original_id": "contest25_0071",
+    "pending_reason": "拟答B，指宝鸡青铜器博物院。题干“唯一”未限定类别与时间，不应据此认定全国没有其他青铜器专题博物馆。",
+    "question": "中国最大且是唯一的青铜器博物馆位于（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0071"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 71
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_0721"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "按2022年题干所指项目批次，保留AB为拟答。题中同时出现“钱塘江源头”和“钱江源—百山祖”等近似名称，本轮未取得足以锁定两项名单的原始批复；不能用三版多数票定案。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 钱塘江源头区域山水林田湖草生态保护修复工程试点",
+      "B. 瓯江源头区域山水林田湖草沙一体化保护和修复工程",
+      "C. 太湖流域区域山水林田湖草沙一体化保护和修复工程",
+      "D. 钱江源-百山祖山水林田湖草沙一体化保护和修复工程"
+    ],
+    "original_id": "contest25_0104",
+    "pending_reason": "按2022年题干所指项目批次，保留AB为拟答。题中同时出现“钱塘江源头”和“钱江源—百山祖”等近似名称，本轮未取得足以锁定两项名单的原始批复；不能用三版多数票定案。",
+    "question": "2022年12月，“中国山水工程”入选联合国首批十大“世界生态恢复旗舰项目”，中国的生态治理经验得到了国际社会认可。“中国山水工程”部署实施了44个山水工程项目，其中浙江省（）两大工程入选国家级山水工程项目。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0104"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 104
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_0751"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "按选项推定为D（湖北省）；“大别山”跨省，同名或近名保护地易混，需以主办方指定保护区全称核对。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 江苏省",
+      "B. 江西省",
+      "C. 湖南省",
+      "D. 湖北省"
+    ],
+    "original_id": "contest25_0124",
+    "pending_reason": "按选项推定为D（湖北省）；“大别山”跨省，同名或近名保护地易混，需以主办方指定保护区全称核对。",
+    "question": "大别山国家级自然保护区位于（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0124"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 124
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_0769"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "按原题编写时的“设区市全部获评”语境拟答江西省；“目前”“唯一”是时点性表述，不作为当前全国排名结论。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 湖南省",
+      "B. 江西省",
+      "C. 广东省",
+      "D. 四川省"
+    ],
+    "original_id": "contest25_0153",
+    "pending_reason": "按原题编写时的“设区市全部获评”语境拟答江西省；“目前”“唯一”是时点性表述，不作为当前全国排名结论。",
+    "question": "森林城市建设是借鉴发达国家经验，适应我国国情和发展阶段，推进我国城乡生态建设的一种创新实践。目前，全国唯一一个所有设区市均为国家森林城市的省份是（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0153"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 153
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_0797"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "按题库通常采用的景区宣传称谓拟答B（分界洲岛）；“首家海岛型”的类别口径不够明确。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 刘公岛",
+      "B. 分界洲岛",
+      "C. 蜈支洲岛",
+      "D. 鼓浪屿"
+    ],
+    "original_id": "contest25_0229",
+    "pending_reason": "按题库通常采用的景区宣传称谓拟答B（分界洲岛）；“首家海岛型”的类别口径不够明确。",
+    "question": "我国首家海岛型5A级景区位于（）",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0229"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 229
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_0862"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "C、D文字重复，但正确选项A唯一，不影响作答。",
+    "answer_status": "invalid_options",
+    "images": [
+      "assets/images/docx_image1.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 图例",
+      "B. 图标",
+      "C. 指示标",
+      "D. 指示标"
+    ],
+    "original_id": "contest25_0238",
+    "pending_reason": "题目选项不完整或标号异常，需要核验",
+    "question": "方向、比例尺、（）就是我们通常所说的地图三要素。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0238"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 238
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_0869"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "保留B为湿地类型自然保护区总面积口径的拟答；若只比湿地斑块面积或采用保护地整合后边界，比较口径可能改变。原题没有统计时点，本轮未据原始面积清单作最终排名。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 四川若尔盖湿地",
+      "B. 青海三江源湿地",
+      "C. 辽宁辽河口湿地",
+      "D. 山东黄河口湿地"
+    ],
+    "original_id": "contest25_0279",
+    "pending_reason": "保留B为湿地类型自然保护区总面积口径的拟答；若只比湿地斑块面积或采用保护地整合后边界，比较口径可能改变。原题没有统计时点，本轮未据原始面积清单作最终排名。",
+    "question": "（）是我国面积最大的湿地类型国家级自然保护区。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0279"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 279
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_0904"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "按现有两个选项，题库拟答B；严格而言，国家承认由国家作出，联合国会员资格不等于联合国对国家的“承认”。",
+    "answer_status": "review_pending",
+    "images": [
+      "assets/images/docx_image1.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 本国",
+      "B. 联合国"
+    ],
+    "original_id": "contest25_0285",
+    "pending_reason": "按现有两个选项，题库拟答B；严格而言，国家承认由国家作出，联合国会员资格不等于联合国对国家的“承认”。",
+    "question": "现代国家一般由（）承认，按地区划分和组织它的国民，承担发展生产力，组织或促进社会经济、政治、文化和环境建设等任务。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0285"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 285
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_0909"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "保留30%的历史海岛统计拟答，并与同库东海59%、渤黄海11%的组合对应。题面未给统计调查年份、海岛面积门槛，本轮未找到其原始统计表，不能当作现时统计结论。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 0.59",
+      "B. 0.3",
+      "C. 0.11",
+      "D. 0.2"
+    ],
+    "original_id": "contest25_0371",
+    "pending_reason": "保留30%的历史海岛统计拟答，并与同库东海59%、渤黄海11%的组合对应。题面未给统计调查年份、海岛面积门槛，本轮未找到其原始统计表，不能当作现时统计结论。",
+    "question": "南海海岛数量约占我国海岛总数的（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0371"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 371
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_0977"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "撤回前版ACD拟答。四项在知识上都有相关性，但题干只有三个空且无引文；两份新答案均选ABC，只能提示可能的命题口径，尚不足以确认标准组合。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 地理空间分布",
+      "B. 气象气候条件",
+      "C. 地质演化形成",
+      "D. 地形起伏高程"
+    ],
+    "original_id": "contest25_0379",
+    "pending_reason": "撤回前版ACD拟答。四项在知识上都有相关性，但题干只有三个空且无引文；两份新答案均选ABC，只能提示可能的命题口径，尚不足以确认标准组合。",
+    "question": "秦岭是中国的南北方分界线，之所以具备突出的区域特性和特殊作用，与秦岭山脉的（）、（）以及（）是密不可分的。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0379"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 379
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_0983"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "撤回前版BCD作为确定组合的用法。BC是常见的生物成因、热成因主要气源；是否计入题列A和D，取决于气源分类与命题范围。三版分别给出不同集合，需核原始材料，暂不机械合并。",
+    "answer_status": "review_pending",
+    "images": [
+      "assets/images/docx_image4.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 为大气中的烃类气体溶解于海水而进入沉积物",
+      "B. 浅层沉积物中的有机质在细菌的降解作用下产生的甲烷气",
+      "C. 是深部沉积有机质热成熟或石油在热裂解作用下产生的天然气",
+      "D. 为火山作用产生的无机成因的烃类气体"
+    ],
+    "original_id": "contest25_0391",
+    "pending_reason": "撤回前版BCD作为确定组合的用法。BC是常见的生物成因、热成因主要气源；是否计入题列A和D，取决于气源分类与命题范围。三版分别给出不同集合，需核原始材料，暂不机械合并。",
+    "question": "生成可燃冰的气体来自哪里？（）",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0391"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 391
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_0991"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "保留“国家”为拟答。但单凭“中国古代很早就使用”不能排除“国”“家”同样很早出现，原题缺少出处或进一步限定，不应把其他选项一概判为历史事实错误。",
+    "answer_status": "review_pending",
+    "images": [
+      "assets/images/docx_image3.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 国家",
+      "B. 国",
+      "C. 家"
+    ],
+    "original_id": "contest25_0401",
+    "pending_reason": "保留“国家”为拟答。但单凭“中国古代很早就使用”不能排除“国”“家”同样很早出现，原题缺少出处或进一步限定，不应把其他选项一概判为历史事实错误。",
+    "question": "中国古代很早就使用了“（）”一词。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0401",
+      "contest25_0661"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 401
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_0998"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "C、D选项均写“建业”，属于干扰项重复，不影响A项答案。",
+    "answer_status": "invalid_options",
+    "images": [
+      "assets/images/docx_image1.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 洛阳",
+      "B. 成都",
+      "C. 建业",
+      "D. 建业"
+    ],
+    "original_id": "contest25_0404",
+    "pending_reason": "题目选项不完整或标号异常，需要核验",
+    "question": "三国鼎立时期，魏国定都（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0404"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 404
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1001"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "结合“唐朝”与选项拟选A《唐十道图》。题干关于定期重修、报送的表述可能对应唐代图经制度，附件未给出处，书名与制度的对应关系需复核。",
+    "answer_status": "review_pending",
+    "images": [
+      "assets/images/docx_image1.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 《唐十道图》",
+      "B. 《九州山川图》",
+      "C. 《舆地图》",
+      "D. 《广舆图》"
+    ],
+    "original_id": "contest25_0427",
+    "pending_reason": "结合“唐朝”与选项拟选A《唐十道图》。题干关于定期重修、报送的表述可能对应唐代图经制度，附件未给出处，书名与制度的对应关系需复核。",
+    "question": "作为基本地图测制的开端的（），相当于现在的国家基本地形图，唐朝规定此图每三年（后改为五年）须重修、报送、编制。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0427",
+      "contest25_0588"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 427
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1017"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "C、D均写《洛阳伽蓝记》，属于干扰项重复，不影响答案A。",
+    "answer_status": "invalid_options",
+    "images": [
+      "assets/images/docx_image1.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 《水经注》",
+      "B. 《梦溪笔谈》",
+      "C. 《洛阳伽蓝记》",
+      "D. 《洛阳伽蓝记》"
+    ],
+    "original_id": "contest25_0458",
+    "pending_reason": "题目选项不完整或标号异常，需要核验",
+    "question": "北魏地理学家郦道元，著有兼具文学价值的地理巨著（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0458"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 458
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1044"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "正确地点组合应为②大梁、③邯郸、④临淄；①郢不在黄淮海平原，⑤咸阳在关中。原四个选项都夹入①或⑤，因此没有完全正确的选项，不能选最接近的一组。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. ①②③⑤",
+      "B. ②③④⑤",
+      "C. ①②③④",
+      "D. ①③④⑤"
+    ],
+    "original_id": "contest25_0523",
+    "pending_reason": "正确地点组合应为②大梁、③邯郸、④临淄；①郢不在黄淮海平原，⑤咸阳在关中。原四个选项都夹入①或⑤，因此没有完全正确的选项，不能选最接近的一组。",
+    "question": "下列诸侯国的都城地处黄淮海平原的是（）。\n①郢②大梁③邯郸④临淄⑤咸阳",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0523"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 523
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1089"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "撤回前版70.24%的拟答。三版分别指向70.24%、70.44%、70.34%，题干又限定截至2020年底；本轮未取得该统计出处，精确到0.01个百分点不能凭印象或多数票决定。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 0.7023999999999999",
+      "B. 0.7034",
+      "C. 0.7044",
+      "D. 0.7054"
+    ],
+    "original_id": "contest25_0524",
+    "pending_reason": "撤回前版70.24%的拟答。三版分别指向70.24%、70.44%、70.34%，题干又限定截至2020年底；本轮未取得该统计出处，精确到0.01个百分点不能凭印象或多数票决定。",
+    "question": "2022年12月14日，国家林业和草原局下发《关于2022年国家湿地公园试点验收结果的通知》，湖南省醴陵官庄湖国家湿地公园、新宁夫夷江国家湿地公园、通道玉带河国家湿地公园、麻阳锦江国家湿地公园通过国家试点验收，被授予“国家湿地公园”称号。近年来，湖南省高度重视湿地保护与建设工作，形成了由湿地自然保护区、国际重要湿地、国家重要湿地、国家湿地公园、省级重要湿地等组成的湿地保护网络。截至2020年底，共有3处国际重要湿地、5处国家重要湿地、52处省级重要湿地、78处省级以上湿地公园，湿地保护率达（），国家级湿地公园数量名列全国第一。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0524"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 524
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1090"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "保留11%的历史海岛统计拟答；与第371题30%及东海59%配套。其调查年份和岛屿统计标准未见题干说明，本轮不宣称已独立核得原始统计。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 0.59",
+      "B. 0.3",
+      "C. 0.11",
+      "D. 0.2"
+    ],
+    "original_id": "contest25_0562",
+    "pending_reason": "保留11%的历史海岛统计拟答；与第371题30%及东海59%配套。其调查年份和岛屿统计标准未见题干说明，本轮不宣称已独立核得原始统计。",
+    "question": "渤海和黄海海岛数量约占我国海岛总数的（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0562"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 562
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1121"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "按常用矿产图例保留磷为拟答；附件未附完整图例，故识别仍有条件，不能把它写成无歧义的已核标准答案。",
+    "answer_status": "review_pending",
+    "images": [
+      "assets/images/docx_image38.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 铜",
+      "B. 盐矿",
+      "C. 铁",
+      "D. 磷"
+    ],
+    "original_id": "contest25_0585",
+    "pending_reason": "按常用矿产图例保留磷为拟答；附件未附完整图例，故识别仍有条件，不能把它写成无歧义的已核标准答案。",
+    "question": "四川地址构造复杂，成矿条件好，是我国矿物原材料生产加工大省，矿产量居全国前五。读图，下列未在图中表示的矿产资源是（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0585"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 585
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1138"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "正确日期为1949年10月6日。DeepSeek写出的日期与前版知识判断相同，不应算作其答错；原选项却是数字序列。即使按Excel常用1900日期系统，A的18172也对应1949年10月1日，不能据此选A。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 18172",
+      "B. 18264",
+      "C. 21976",
+      "D. 28887"
+    ],
+    "original_id": "contest25_0608",
+    "pending_reason": "正确日期为1949年10月6日。DeepSeek写出的日期与前版知识判断相同，不应算作其答错；原选项却是数字序列。即使按Excel常用1900日期系统，A的18172也对应1949年10月1日，不能据此选A。",
+    "question": "朝鲜是我国陆上邻国之一，朝鲜与我国的建交时间是（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0608"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 608
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1155"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "撤回前版B“商代”的拟答。题面没有界定“版图概念”、地图实物或词语记录，夏商起源说不能彼此替代。两份新答案的A提示夏代口径，但仍需主办方资料或确切引文。",
+    "answer_status": "review_pending",
+    "images": [
+      "assets/images/docx_image1.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 夏代",
+      "B. 商代"
+    ],
+    "original_id": "contest25_0611",
+    "pending_reason": "撤回前版B“商代”的拟答。题面没有界定“版图概念”、地图实物或词语记录，夏商起源说不能彼此替代。两份新答案的A提示夏代口径，但仍需主办方资料或确切引文。",
+    "question": "“版图”这一概念的产生，在中国可以追溯到（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0611"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 611
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1157"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "给定选项中选春季3—6月这一高发期；草原火灾也可在秋季高发，不能据此理解为只发生在3—6月。C、D重复。",
+    "answer_status": "invalid_options",
+    "images": [
+      "assets/images/docx_image1.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 1-3月",
+      "B. 3-6月",
+      "C. 6-9月",
+      "D. 6-9月"
+    ],
+    "original_id": "contest25_0619",
+    "pending_reason": "题目选项不完整或标号异常，需要核验",
+    "question": "我国草原火灾常发生在（）月",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0619"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 619
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1162"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "在分省设色条件下，2003年旧规定对香港、澳门界内陆地要求单独设色。2023年新规范没有原样保留这段设色细则，故A只用于辨认旧题来源，不伪称新规范直接条文。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 单独设色",
+      "B. 不设色",
+      "C. 不单独设色",
+      "D. 设特定颜色"
+    ],
+    "original_id": "contest25_0629",
+    "pending_reason": "在分省设色条件下，2003年旧规定对香港、澳门界内陆地要求单独设色。2023年新规范没有原样保留这段设色细则，故A只用于辨认旧题来源，不伪称新规范直接条文。",
+    "question": "在分省设色的地图上，香港、澳门界内的陆地部分应该如何设色？（）",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0629"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 629
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1170"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "B、C重复，均不影响A塔克拉玛干沙漠。",
+    "answer_status": "invalid_options",
+    "images": [
+      "assets/images/docx_image1.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 塔克拉玛干沙漠",
+      "B. 古尔班通古特沙漠",
+      "C. 古尔班通古特沙漠",
+      "D. 腾格里沙漠"
+    ],
+    "original_id": "contest25_0692",
+    "pending_reason": "题目选项不完整或标号异常，需要核验",
+    "question": "我国面积最大的沙漠是（）",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0692"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 692
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1218"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "撤回前版C的“最接近选项”拟答。交通运输部所述全线北起横州平塘江口，经灵山县陆屋镇沿钦江通北部湾；灵山县是途经地，合浦也不是全线终点。题问起点和终点，四个组合均不准确。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 南宁市邕宁区、钦州市灵山县",
+      "B. 南宁市邕宁区、北海市合浦县",
+      "C. 南宁市横州市、钦州市灵山县",
+      "D. 南宁市横州市、北海市合浦县"
+    ],
+    "original_id": "contest25_0696",
+    "pending_reason": "撤回前版C的“最接近选项”拟答。交通运输部所述全线北起横州平塘江口，经灵山县陆屋镇沿钦江通北部湾；灵山县是途经地，合浦也不是全线终点。题问起点和终点，四个组合均不准确。",
+    "question": "平陆运河是我国自京杭大运河后一千多年来的第一条运河，以发展航运为主，兼顾供水、灌溉、防洪、改善水生态环境等，其起点和终点分别是（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0696"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 696
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1222"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "按分省设色理解，三群岛真形岛屿对应海南省，保留A；但原题未显式写出设色层级。不得把这一推断说成2023年规范明确规定的同一句设色条文。",
+    "answer_status": "review_pending",
+    "images": [
+      "assets/images/docx_image1.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 海南省",
+      "B. 广东省",
+      "C. 三沙市",
+      "D. 三亚市"
+    ],
+    "original_id": "contest25_0747",
+    "pending_reason": "按分省设色理解，三群岛真形岛屿对应海南省，保留A；但原题未显式写出设色层级。不得把这一推断说成2023年规范明确规定的同一句设色条文。",
+    "question": "在地图上表示南海诸岛时应注意，西沙群岛、中沙群岛、南沙群岛中以真形表示的岛屿，应当统一按（）设色。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0747"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 747
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1254"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "保留ABD拟答。若严格问承担法律责任的法、条例、部门规章，C规范性文件不能独立创设处罚；若命题泛指全部管理依据，则可能包含C。题干没有清楚区分，须核评分口径。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 《地图管理条例》",
+      "B. 《中华人民共和国测绘法》",
+      "C. 《公开地图内容表示规范》",
+      "D. 《地图审核管理规定》"
+    ],
+    "original_id": "contest25_0763",
+    "pending_reason": "保留ABD拟答。若严格问承担法律责任的法、条例、部门规章，C规范性文件不能独立创设处罚；若命题泛指全部管理依据，则可能包含C。题干没有清楚区分，须核评分口径。",
+    "question": "“问题地图”应根据（）等国家法律法规承担法律责任。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0763"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 763
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1268"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "按各大区域的主导土地利用类型，保留BCD拟答：东北平原侧重种植业、塔里木盆地干旱、内蒙古高原侧重草原畜牧业。但“不适合”不等于任何地方都无林业，原题未标单多选、也未限定尺度，需核命题范围。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 大兴安岭",
+      "B. 东北平原",
+      "C. 塔里木盆地",
+      "D. 内蒙古高原"
+    ],
+    "original_id": "contest25_0788",
+    "pending_reason": "按各大区域的主导土地利用类型，保留BCD拟答：东北平原侧重种植业、塔里木盆地干旱、内蒙古高原侧重草原畜牧业。但“不适合”不等于任何地方都无林业，原题未标单多选、也未限定尺度，需核命题范围。",
+    "question": "从因地制宜角度看，下列地区不适合发展林业的是（）",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0788"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 788
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1287"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "保留湘黔线为拟答，但题干“直接相连接”未区分高铁专线连接、既有干线及枢纽衔接；两份新答案的京广线也不能仅凭全国铁路网可达性确认。建议核原题配套线路图。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 湘黔线",
+      "B. 青藏线",
+      "C. 兰新线",
+      "D. 京广线"
+    ],
+    "original_id": "contest25_0836",
+    "pending_reason": "保留湘黔线为拟答，但题干“直接相连接”未区分高铁专线连接、既有干线及枢纽衔接；两份新答案的京广线也不能仅凭全国铁路网可达性确认。建议核原题配套线路图。",
+    "question": "直接与成贵高铁相连接的铁路干线是（）",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0836"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 836
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1317"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "暂保留“安化云台山、15个”的前版拟答。本轮未取得锁定2016年首家试点与2021年6月数量的同一组官方历史材料；不得写成已核实的精确统计。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 湖南张家界红石林国家石漠公园 15个",
+      "B. 湖南安化云台山国家石漠公园 15个",
+      "C. 湖南溆浦雷峰山国家石漠公园 16个",
+      "D. 湖南新宁国家石漠公园 16个"
+    ],
+    "original_id": "contest25_0837",
+    "pending_reason": "暂保留“安化云台山、15个”的前版拟答。本轮未取得锁定2016年首家试点与2021年6月数量的同一组官方历史材料；不得写成已核实的精确统计。",
+    "question": "国家石漠公园是指以多样化的岩溶地貌与生物景观资源为基础，以保护岩溶生态系统及其生态环境为基本出发点，以生态文化建设和科普宣教为主线，合理利用资源开展公众游憩、旅游休闲和进行科学、文化、宣传和教育活动的特定区域。2016年，湖南省成功申报了全国第一家国家石漠公园试点（）。截至2021年6月，湖南省已建成国家石漠公园（）个，总面积2.24万公顷，数量和面积均居全国第一。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0837"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 837
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1318"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "保留哥窑为常见拟答，但宋代官窑还涉及南宋杭州官窑，故“唯一位于南方”在未限定时期时并不严谨；题中“均窑”也应作“钧窑”。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 官窑",
+      "B. 哥窑",
+      "C. 定窑",
+      "D. 均窑"
+    ],
+    "original_id": "contest25_0867",
+    "pending_reason": "保留哥窑为常见拟答，但宋代官窑还涉及南宋杭州官窑，故“唯一位于南方”在未限定时期时并不严谨；题中“均窑”也应作“钧窑”。",
+    "question": "宋代是我国瓷业发展史上的繁荣期，形成了官、哥、汝、定、均五大名窑，其中唯一一处位于南方的瓷窑是（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0867"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 867
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1338"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "暂保留具体功能区组合ACD的拟答。B湾区是所在整体区域，题干却写“之间”；本轮未找到这一完整宣传句的原始出处，无法据语感排除B或确认ACD为官方评分组合。",
+    "answer_status": "review_pending",
+    "images": [
+      "assets/images/docx_image3.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 广东自由贸易试验区",
+      "B. 粤港澳大湾区",
+      "C. 深圳市高新技术产业园",
+      "D. 中山火炬高技术产业开发区"
+    ],
+    "original_id": "contest25_0872",
+    "pending_reason": "暂保留具体功能区组合ACD的拟答。B湾区是所在整体区域，题干却写“之间”；本轮未找到这一完整宣传句的原始出处，无法据语感排除B或确认ACD为官方评分组合。",
+    "question": "深中通道作为珠三角“深莞惠”与“珠中江”两大城市群之间唯一公路直连通道，是（）之间的交通纽带，对加快推动粤港澳大湾区城市群融合发展具有重要的战略意义。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0872",
+      "contest25_1096"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 872
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1343"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "原题以莫高窟开凿于北魏为比较前提，但莫高窟始建通常记为前秦366年。仅凭两份答案同选马蹄寺不能修复错误前提；暂不选定，待更正年代或给出具体洞窟范围。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 马蹄寺石窟",
+      "B. 金塔寺石窟",
+      "C. 文殊寺石窟",
+      "D. 炳灵寺石窟"
+    ],
+    "original_id": "contest25_0888",
+    "pending_reason": "原题以莫高窟开凿于北魏为比较前提，但莫高窟始建通常记为前秦366年。仅凭两份答案同选马蹄寺不能修复错误前提；暂不选定，待更正年代或给出具体洞窟范围。",
+    "question": "位于张掖市境内的（），其石窟开凿年代同敦煌莫高窟同属北魏时期。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0888"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 888
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1355"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "最终结论保留待核，不能把倾向BCD写成确定答案。",
+    "answer_status": "review_pending",
+    "images": [
+      "assets/images/docx_image3.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 城市建设用地细化",
+      "B. 国土空间规划编制及实施监督",
+      "C. 国土空间规划城市体检评估",
+      "D. 用途管制"
+    ],
+    "original_id": "contest25_0902",
+    "pending_reason": "最终结论保留待核，不能把倾向BCD写成确定答案。",
+    "question": "城市国土空间监测通过掌握城市建设总量、用地结构、基础设施和服务功能等情况，支撑（）等国土空间治理工作。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0902"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 902
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1368"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "在给定的边疆省区选项中按题库意图拟选新疆。题干“全国开放口岸最多”没有区分陆路、海港、空港及开放等级，不能视为严格、通用的全国排名。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 新疆维吾尔自治区",
+      "B. 西藏自治区",
+      "C. 内蒙古自治区",
+      "D. 广西壮族自治区"
+    ],
+    "original_id": "contest25_0975",
+    "pending_reason": "在给定的边疆省区选项中按题库意图拟选新疆。题干“全国开放口岸最多”没有区分陆路、海港、空港及开放等级，不能视为严格、通用的全国排名。",
+    "question": "中国开放口岸最多的省级行政区是（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0975"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 975
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1413"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "按全国气温分布的重要因素保留海陆、纬度、地形三个因素的拟答。若题目实际为“最主要因素”的单选，则通常选纬度B；原题没有“最主要”且未标题型，建议核主办方口径。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 海陆因素",
+      "B. 纬度因素",
+      "C. 地形因素",
+      "D. 洋流因素"
+    ],
+    "original_id": "contest25_1073",
+    "pending_reason": "按全国气温分布的重要因素保留海陆、纬度、地形三个因素的拟答。若题目实际为“最主要因素”的单选，则通常选纬度B；原题没有“最主要”且未标题型，建议核主办方口径。",
+    "question": "影响我国气温分布的重要因素是（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_1073"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 1073
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1478"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "拟选D“163公里、63%”，为题干采用的岳阳地区统计概数；附件未列引文，精确比例宜复核原始统计材料。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 165公里 50%",
+      "B. 165公里 63%",
+      "C. 163公里 50%",
+      "D. 163公里 63%"
+    ],
+    "original_id": "contest25_1108",
+    "pending_reason": "拟选D“163公里、63%”，为题干采用的岳阳地区统计概数；附件未列引文，精确比例宜复核原始统计材料。",
+    "question": "湖南省岳阳市是国务院首批沿江开放城市，长江中游重要的区域中心城市，北依长江、怀抱洞庭，南纳三湘四水，拥有（）的长江岸线、（）的洞庭湖水域面积和1500多平方公里的东洞庭湖湿地，是湖南省建设长江经济带、保护与治理洞庭湖生态的主战场和主阵地。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_1108"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 1108
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1503"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "2003年旧规定的香港城市地图图名为“香港岛·九龙”，区别于特别行政区全图。旧文件已于2023年废止，现行规范没有原样保留该句；B只作为旧题来源的参考答法，不能当作现行一律要求。",
+    "answer_status": "review_pending",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 香港",
+      "B. 香港岛·九龙",
+      "C. 香港岛",
+      "D. 香港特别行政区"
+    ],
+    "original_id": "contest25_1125",
+    "pending_reason": "2003年旧规定的香港城市地图图名为“香港岛·九龙”，区别于特别行政区全图。旧文件已于2023年废止，现行规范没有原样保留该句；B只作为旧题来源的参考答法，不能当作现行一律要求。",
+    "question": "香港城市地图图名应是（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_1125"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 1125
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_1513"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 云南省",
+      "B. 内蒙古自治区",
+      "C.黑龙江省",
+      "D. 上海市"
+    ],
+    "original_id": "middle_225",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "请问下图是哪个省级行政区的轮廓？（    ）",
+    "scorable": false,
+    "source_ids": [
+      "middle_225"
+    ],
+    "source_reference": {
+      "answer_page": 18,
+      "file": "2.国家版图知识竞赛题库.pdf",
+      "page": 14,
+      "question_number": 225
+    },
+    "sources": [
+      "中学组样题库"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_middle_225"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. ①②",
+      "B. ②③",
+      "C. ①④",
+      "D. ③④"
+    ],
+    "original_id": "history_071",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是桂林的梯田（左图）和月亮山（右图），如果要比较好地观赏它们，最佳方位是？ （） ①梯田：宜在适当的位置俯瞰 ②月亮山：应在视野开阔的近点平视 ③均宜在适宜的距离内 平视 ④均应选择观赏位置",
+    "scorable": false,
+    "source_ids": [
+      "history_071"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 12,
+      "question_number": 71
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_071"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 横琴岛",
+      "B. 澳门半岛",
+      "C. 氹仔岛",
+      "D. 路环岛"
+    ],
+    "original_id": "history_079",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图中，2 代表的是澳门的（）",
+    "scorable": false,
+    "source_ids": [
+      "history_079"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 13,
+      "question_number": 79
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_079"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 武汉",
+      "B. 南京",
+      "C. 南昌",
+      "D. 福州"
+    ],
+    "original_id": "history_111",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国某省会城市的卫星照片，请问这是哪座城市？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_111"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 19,
+      "question_number": 111
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_111"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 武汉",
+      "B. 南京",
+      "C. 南昌",
+      "D. 福州"
+    ],
+    "original_id": "history_125",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国某省会城市的卫星照片，请问这是哪座城市？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_125"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 21,
+      "question_number": 125
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_125"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 内水",
+      "B. 领海",
+      "C. 毗连区",
+      "D. 专属经济区"
+    ],
+    "original_id": "history_173",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国主张管辖的海域空间结构示意图。据此回答以下6 道题。 请问上图中C 指 的是什么？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_173"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 29,
+      "question_number": 173
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_173"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 武汉",
+      "B. 南京",
+      "C. 南昌",
+      "D. 福州"
+    ],
+    "original_id": "history_205",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国某省会城市的卫星照片，请问这是哪座城市？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_205"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 34,
+      "question_number": 205
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_205"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 江苏",
+      "B. 湖南",
+      "C. 河南",
+      "D. 湖北"
+    ],
+    "original_id": "history_240",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下面的卫星图片表示的是我国某个省的轮廓，请问它表示的是哪个省？（） （单选 题）",
+    "scorable": false,
+    "source_ids": [
+      "history_240"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 40,
+      "question_number": 240
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_240"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. ①②",
+      "B. ②③",
+      "C. ①④",
+      "D. ③④"
+    ],
+    "original_id": "history_241",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是桂林的梯田（左图）和月亮山（右图），如果要比较好地观赏它们，最佳方位 是？（） ①梯田：宜在适当的位置俯瞰 ②月亮山：应在视野开阔的近点平视 ③均宜在适宜的距 离内平视 ④均应选择观赏位置",
+    "scorable": false,
+    "source_ids": [
+      "history_241"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 40,
+      "question_number": 241
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_241"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 云南省",
+      "B. 新疆维吾尔自治区",
+      "C. 黑龙江省",
+      "D. 海南省"
+    ],
+    "original_id": "history_242",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "请问下图是哪个省级行政区的轮廓？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_242"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 41,
+      "question_number": 242
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_242"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 领海",
+      "B. 领陆",
+      "C. 领空",
+      "D. 领水"
+    ],
+    "original_id": "history_280",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "国家领土是国家形式主权的空间，领土包括领陆、领水和领空。下图中的A 表示的是 （）",
+    "scorable": false,
+    "source_ids": [
+      "history_280"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 47,
+      "question_number": 280
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_280"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 武威市",
+      "B. 张掖市",
+      "C. 金昌市",
+      "D. 嘉峪关市"
+    ],
+    "original_id": "history_296",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是“七一”冰川，它是由中国科学院兰州分院的科技工作者和原苏联冰川学专家于 1958 年7 月1 日发现，并以发现日期命名的一座高原冰川，位于祁连山腹地，是整个亚洲地区距 离城市最近的可游览冰川。请问是哪座城市距离它最近？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_296"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 49,
+      "question_number": 296
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_296"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 黄山",
+      "B. 泰山",
+      "C. 华山",
+      "D. 天山"
+    ],
+    "original_id": "history_389",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图表示的是我国的一座名山，它的名称是（）",
+    "scorable": false,
+    "source_ids": [
+      "history_389"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 65,
+      "question_number": 389
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_389"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 白银",
+      "B. 兰州",
+      "C. 陇南",
+      "D. 张掖"
+    ],
+    "original_id": "history_400",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下列卫星照片表示的是甘肃省的哪个市州？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_400"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 67,
+      "question_number": 400
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_400"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 白银",
+      "B. 兰州",
+      "C. 陇南",
+      "D. 张掖"
+    ],
+    "original_id": "history_443",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下列卫星照片表示的是甘肃省的哪个市州？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_443"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 74,
+      "question_number": 443
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_443"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 金昌",
+      "B. 嘉峪关",
+      "C. 甘南藏族自治州",
+      "D. 武威"
+    ],
+    "original_id": "history_464",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下列卫星照片表示的是甘肃省的哪个市州？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_464"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 77,
+      "question_number": 464
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_464"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 云南省",
+      "B. 新疆维吾尔自治区",
+      "C. 黑龙江省",
+      "D. 海南省"
+    ],
+    "original_id": "history_508",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "请问下图是哪个省级行政区的轮廓？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_508"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 85,
+      "question_number": 508
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_508"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 白银",
+      "B. 定西",
+      "C. 武威",
+      "D. 张掖"
+    ],
+    "original_id": "history_528",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下列卫星照片表示的是甘肃省的哪个市州？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_528"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 88,
+      "question_number": 528
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_528"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 领空",
+      "B. 领海",
+      "C. 毗连区",
+      "D. 领土"
+    ],
+    "original_id": "history_531",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国主张管辖的海域空间结构示意图。据此回答以下6 道题。 请问上图中B 指 的是什么？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_531"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 88,
+      "question_number": 531
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_531"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 大陆架",
+      "B. 领海",
+      "C. 毗连区",
+      "D. 专属经济区"
+    ],
+    "original_id": "history_535",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国主张管辖的海域空间结构示意图。据此回答以下6 道题。 请问上图中D 指 的是什么？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_535"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 89,
+      "question_number": 535
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_535"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 内水",
+      "B. 领陆",
+      "C. 领海",
+      "D. 专属经济区"
+    ],
+    "original_id": "history_545",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国主张管辖的海域空间结构示意图。据此回答以下6 道题。 请问上图中F 指 的是什么？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_545"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 91,
+      "question_number": 545
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_545"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 江苏",
+      "B. 湖南",
+      "C. 河南",
+      "D. 湖北"
+    ],
+    "original_id": "history_558",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下面的卫星图片表示的是我国某个省的轮廓，请问它表示的是哪个省？（） （单选 题）",
+    "scorable": false,
+    "source_ids": [
+      "history_558"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 93,
+      "question_number": 558
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_558"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 辽宁省",
+      "B. 青海省",
+      "C. 安徽省",
+      "D. 甘肃省"
+    ],
+    "original_id": "history_577",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是我国哪个省的轮廓图？（）",
+    "scorable": false,
+    "source_ids": [
+      "history_577"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 96,
+      "question_number": 577
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_577"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 图中的图案是动态莲花",
+      "B. 红旗代表中华人民共和国",
+      "C. 花蕊上的五颗星象征香港同胞心中热爱祖国",
+      "D. 红白两色体现了“一国两制”精神"
+    ],
+    "original_id": "history_578",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图是香港特别行政区区旗，下面的说法不正确的是（）",
+    "scorable": false,
+    "source_ids": [
+      "history_578"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 96,
+      "question_number": 578
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_578"
+  },
+  {
+    "answer": "",
+    "answer_status": "missing_diagram",
+    "images": [],
+    "legacy_uids": [],
+    "options": [
+      "A. 横琴岛",
+      "B. 澳门半岛",
+      "C. 氹仔岛",
+      "D. 路环岛"
+    ],
+    "original_id": "history_619",
+    "pending_reason": "题目依赖配图，但原文件没有对应配图",
+    "question": "下图中，2 代表的是澳门的（）",
+    "scorable": false,
+    "source_ids": [
+      "history_619"
+    ],
+    "source_reference": {
+      "file": "历年真题模拟汇编.pdf",
+      "page": 103,
+      "question_number": 619
+    },
+    "sources": [
+      "历年真题汇编"
+    ],
+    "type": "single",
+    "uid": "Q_SRC_history_619"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "正确内容为建业，原题C、D完全重复。写C并不构成知识性错误，但题目不能形成唯一单选字母；这里的“或”不是要求多选CD。",
+    "answer_status": "invalid_options",
+    "images": [
+      "assets/images/docx_image1.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 洛阳",
+      "B. 成都",
+      "C. 建业",
+      "D. 建业"
+    ],
+    "original_id": "contest25_0161",
+    "pending_reason": "题目选项不完整或标号异常，需要核验",
+    "question": "三国鼎立时期，吴国定都（）。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0161"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 161
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_SRC_contest25_0161"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "按现有两个选项，题库拟答B；严格而言，国家承认由国家作出，联合国会员资格不等于联合国对国家的“承认”。",
+    "answer_status": "review_pending",
+    "images": [
+      "assets/images/docx_image3.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 本国",
+      "B. 联合国"
+    ],
+    "original_id": "contest25_0742",
+    "pending_reason": "按现有两个选项，题库拟答B；严格而言，国家承认由国家作出，联合国会员资格不等于联合国对国家的“承认”。",
+    "question": "现代国家一般由（）承认，按地区划分和组织它的国民，承担发展生产力，组织或促进社会经济、政治、文化和环境建设等任务。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_0742",
+      "contest25_1053"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 742
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_SRC_contest25_0742"
+  },
+  {
+    "answer": "",
+    "answer_explanation": "应降低前版“确定无有效选项”的断言：原题未写“分省设色”。若沿用同库第747题的省级口径，应为海南而本题缺该项；若按地级设色，C三沙可能成立。设色层级未明，暂不选定，不能声称2023年规范直接排除了C。",
+    "answer_status": "review_pending",
+    "images": [
+      "assets/images/docx_image1.png"
+    ],
+    "legacy_uids": [],
+    "options": [
+      "A. 福建省",
+      "B. 广东省",
+      "C. 三沙市",
+      "D. 三亚市"
+    ],
+    "original_id": "contest25_1051",
+    "pending_reason": "应降低前版“确定无有效选项”的断言：原题未写“分省设色”。若沿用同库第747题的省级口径，应为海南而本题缺该项；若按地级设色，C三沙可能成立。设色层级未明，暂不选定，不能声称2023年规范直接排除了C。",
+    "question": "在地图上表示南海诸岛时应注意，西沙群岛、中沙群岛、南沙群岛中以真形表示的岛屿，应当统一按（）设色。",
+    "scorable": false,
+    "source_ids": [
+      "contest25_1051"
+    ],
+    "source_reference": {
+      "file": "25年版图大赛题库.docx",
+      "question_number": 1051
+    },
+    "sources": [
+      "2025大赛题库"
+    ],
+    "type": "unknown",
+    "uid": "Q_SRC_contest25_1051"
+  }
+]
