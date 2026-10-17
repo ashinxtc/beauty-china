@@ -49,7 +49,7 @@
     constructor(options = {}) {
       this.appId = options.appId || 'beautifulChina';
       this.prefix = options.prefix || 'bc_';
-      this.serverUrl = options.serverUrl || 'https://sync.daka-tool.top';
+      this.serverUrl = options.serverUrl || 'https://beauty-china-sync.2378385593.workers.dev';
       this.listeners = {};
       this.isSyncing = false;
       this.autoSyncTimer = null;
