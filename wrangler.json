@@ -1,0 +1,7 @@
+{
+  "name": "beauty-china-sync",
+  "main": "worker/sync.mjs",
+  "compatibility_date": "2026-10-17",
+  "workers_dev": true,
+  "kv_namespaces": [{"binding":"BEAUTY_SYNC","id":"8e884dbdcbee4f9988369dcb3db843e6"}]
+}
