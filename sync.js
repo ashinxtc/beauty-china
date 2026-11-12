@@ -49,7 +49,12 @@
     constructor(options = {}) {
       this.appId = options.appId || 'beautifulChina';
       this.prefix = options.prefix || 'bc_';
-      this.serverUrl = options.serverUrl || 'https://beauty-china-sync.2378385593.workers.dev';
+      // 先在真实大陆网络验证专用域名；参数只选择固定入口，不能传入任意服务地址。
+      const previewCustomDomain = typeof URLSearchParams !== 'undefined' &&
+        new URLSearchParams(window.location?.search || '').get('sync-preview') === 'custom-domain';
+      this.serverUrl = options.serverUrl || (previewCustomDomain
+        ? 'https://beauty-sync.daka-tool.top'
+        : 'https://beauty-china-sync.2378385593.workers.dev');
       this.listeners = {};
       this.isSyncing = false;
       this.autoSyncTimer = null;

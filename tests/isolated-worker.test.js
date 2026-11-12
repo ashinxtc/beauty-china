@@ -1,5 +1,19 @@
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+
+test('the custom domain preserves the existing Worker and its sole isolated KV namespace',()=>{
+  const config=JSON.parse(fs.readFileSync(path.join(__dirname,'..','wrangler.json'),'utf8'));
+  assert.equal(config.name,'beauty-china-sync');
+  assert.equal(config.main,'worker/sync.mjs');
+  assert.equal(config.workers_dev,true,'Existing clients must retain their original route');
+  assert.deepEqual(config.kv_namespaces,[{
+    binding:'BEAUTY_SYNC',id:'8e884dbdcbee4f9988369dcb3db843e6',
+  }]);
+  assert.deepEqual(config.routes,[{pattern:'beauty-sync.daka-tool.top',custom_domain:true}]);
+  assert.equal(config.services,undefined,'The isolated Worker must not gain a daka service binding');
+});
 async function fixture(){
   const worker=(await import('../worker/sync.mjs')).default;
   const values=new Map(), writes=[];
