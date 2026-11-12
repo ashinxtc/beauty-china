@@ -3,6 +3,27 @@
 独立 Worker：beauty-china-sync；唯一数据绑定 BEAUTY_SYNC 指向独立 BEAUTY_CHINA_SYNC KV。
 不绑定 DAKA_SYNC，不请求旧服务，不修改 sync.daka-tool.top、打卡 Worker 或打卡数据。
 
+正式同步入口为 `https://beauty-sync.daka-tool.top`。大陆用户关闭 VPN 后可正常同步，是发布验收要求；不能以海外机器或模拟服务测试通过代替。`workers.dev` 不得作为正式客户端默认地址或自动回退地址。
+
+## 大陆免 VPN 入口的开通与发布
+
+此修正分支中的客户端地址和 `wrangler.json` 是待验收的配置。在完成以下步骤前，不合并到生产 `main`，不宣称免 VPN 同步已恢复。
+
+### 先给现有服务开通专用域名
+
+1. 在 Cloudflare 的 Workers & Pages 中打开**现有** `beauty-china-sync`，进入 Settings → Domains & Routes → Add → Custom domain，填写 `beauty-sync.daka-tool.top`。让 Cloudflare 为该 Worker 创建域名和证书；若这个名字已有记录或绑定，先确认归属，不直接覆盖。
+2. 核对域名确实绑定到此 Worker，存储绑定仍然只有 `BEAUTY_SYNC`，对应现有 KV ID `8e884dbdcbee4f9988369dcb3db843e6`。不新建 Worker，不新建或复制 KV，不改同步码、`bc_` 前缀及记录格式。
+3. `wrangler.json` 的 `custom_domain` 路由用于后续受控部署复现该绑定。保留 `workers_dev: true`，让未刷新的旧客户端仍能访问同一份存储；新客户端不依赖它。仅写入配置文件或提交 Git 不会自动建立线上域名绑定。
+
+### 在大陆关闭 VPN 后验收，再切换客户端
+
+1. 等待新域名的 DNS 和 HTTPS 证书生效。在大陆设备关闭 VPN、系统代理后，分别用家庭 Wi-Fi 和手机蜂窝网络访问 `https://beauty-sync.daka-tool.top/`。预期 HTTP 400 和 `{"error":"无效的答题同步码"}`，因为没有携带同步码；此请求不读取 KV。预检 `OPTIONS /` 应返回 204 和允许 GET/POST 的 CORS 头。
+2. 使用独立浏览器上下文及随机、临时的测试同步码，验证上传、另一设备读取、双方数据合并，以及无记录丢失。测试记录不得使用现有家庭同步码；结合部署绑定确认新旧域名访问的是同一个 KV，并考虑 KV 最终一致性。
+3. 两种网络及真实同步验收通过后，才将此修正合入生产 `main`。网站域名保持 `beauty.daka-tool.top`，本机记录和家庭同步码保持原位置；刷新各设备网页后再同步，使用普通“双向合并”，不强制覆盖云端。
+4. 自定义域名仍由 Cloudflare 提供服务，不能保证所有大陆网络可达。如果新入口在目标网络仍不通，继续保持客户端发布门槛，另行选择并验证可直连的托管入口；不能要求用户用 VPN 完成日常同步。
+
+域名尚未生效或验收失败时，保持当前生产发布不变，不把未验证的地址直接上线。修正分支也不增加旧打卡服务或旧 KV 的自动回退。
+
 2026-10-17：从旧 KV 只读枚举 sync:bc_ 前缀，并逐条检查 _app=beautifulChina 后复制到新 KV；原记录保留。实际执行结果以发布记录为准。新服务保留同步码和本机 bc_ 存储，支持 /、/ts、/bak。沿用既有同步码访问模式，未新增身份体系；KV 的最终一致性和旧客户端先合并后上传的并发限制仍然存在。
 
 ## 切换条件

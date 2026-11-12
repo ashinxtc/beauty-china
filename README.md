@@ -60,6 +60,8 @@ iPhone 可在 Safari 打开网站后，点“分享 → 添加到主屏幕”。
 
 ## 云端 / Linux 启动与验证
 
+同步服务的正式入口为 `https://beauty-sync.daka-tool.top`，使用独立的 `beauty-china-sync` Worker 与 `BEAUTY_SYNC` KV。大陆关闭 VPN 后的实际同步验收通过，才允许发布该入口。Cloudflare 域名绑定、分阶段切换和验收要求见 [同步部署说明](docs/sync-isolation.md)。本地模拟测试不代表大陆网络可达性已经通过。
+
 在项目目录运行：
 
 ```bash

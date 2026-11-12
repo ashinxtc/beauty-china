@@ -63,6 +63,46 @@ function payload(childrenData = {}) {
     profiles: [{ id: 'child_default', name: '大宝', avatar: '🦁' }], childrenData };
 }
 
+test('default upload, download and timestamp polling use only the Beauty custom domain', async () => {
+  const d = device();
+  d.engine.setSyncCode('endpoint-test-family');
+  const local = d.engine.getActiveChildData();
+  local.answers.Q_0001 = 'C';
+  d.engine.saveActiveChildData(local);
+  let cloud;
+  d.respond((url, options) => {
+    if (options.method === 'POST') {
+      cloud = JSON.parse(options.body);
+      return response(200);
+    }
+    if (new URL(url).pathname === '/ts') return response(200, { ts: cloud._syncTs });
+    return cloud ? response(200, cloud) : response(404);
+  });
+  assert.equal((await d.engine.syncToCloud()).ok, true);
+  assert.equal((await d.engine.syncFromCloud()).ok, true);
+  await d.engine.checkCloudTimestamp();
+  assert.equal(d.requests.length, 4);
+  assert.deepEqual(d.requests.map(request => new URL(request.url).pathname), ['/', '/', '/', '/ts']);
+  for (const request of d.requests) {
+    const url = new URL(request.url);
+    assert.equal(url.origin, 'https://beauty-sync.daka-tool.top');
+    assert.equal(url.searchParams.get('code'), 'bc_endpoint-test-family');
+  }
+  assert.equal(cloud.childrenData.child_default.answers.Q_0001, 'C');
+});
+
+test('an explicit serverUrl override keeps all requests on the configured server', async () => {
+  const d = device();
+  const custom = new d.engine.constructor({ serverUrl: 'https://configured-beauty.example' });
+  custom.setSyncCode('custom-test-family');
+  d.respond((url, options) => options.method === 'POST' ? response(200) : response(404));
+  assert.equal((await custom.syncToCloud()).ok, true);
+  assert.equal(d.requests.length, 2);
+  for (const request of d.requests) {
+    assert.equal(new URL(request.url).origin, 'https://configured-beauty.example');
+  }
+});
+
 test('the latest answer wins instead of the older local answer', () => {
   const { engine } = device();
   const local = engine.getActiveChildData();
@@ -239,13 +279,36 @@ test('an unavailable service retries finitely and preserves local records', asyn
   d.engine.setSyncCode('test-family');
   const data = d.engine.getActiveChildData();
   data.answers.Q_0001 = 'C';
+  data.favorites.Q_0001 = true;
+  data.progressIndex.unified = 3;
   d.engine.saveActiveChildData(data);
+  const saved = JSON.stringify(d.engine.getActiveChildData());
   d.respond(() => response(503));
   const result = await d.engine.syncToCloud();
   assert.equal(result.ok, false);
   assert.equal(d.requests.length, 3);
+  assert.ok(d.requests.every(request => new URL(request.url).origin === 'https://beauty-sync.daka-tool.top'));
+  assert.ok(d.requests.every(request => !request.method || request.method === 'GET'));
   assert.equal(d.engine.isSyncing, false);
-  assert.equal(d.engine.getActiveChildData().answers.Q_0001, 'C');
+  assert.equal(JSON.stringify(d.engine.getActiveChildData()), saved);
+});
+
+test('a network failure never falls back to workers.dev or the legacy daka service', async () => {
+  const d = device();
+  d.engine.setSyncCode('offline-test-family');
+  const data = d.engine.getActiveChildData();
+  data.answers.Q_0001 = 'C';
+  data.favorites.Q_0001 = true;
+  data.progressIndex.unified = 3;
+  d.engine.saveActiveChildData(data);
+  const saved = JSON.stringify(d.engine.getActiveChildData());
+  d.respond(() => { throw new TypeError('Failed to fetch'); });
+  assert.equal((await d.engine.syncToCloud()).ok, false);
+  assert.equal(d.requests.length, 3);
+  assert.ok(d.requests.every(request => new URL(request.url).origin === 'https://beauty-sync.daka-tool.top'));
+  assert.ok(d.requests.every(request => !request.method || request.method === 'GET'));
+  assert.equal(d.engine.isSyncing, false);
+  assert.equal(JSON.stringify(d.engine.getActiveChildData()), saved);
 });
 
 test('a hung request times out and permits a later retry', async () => {

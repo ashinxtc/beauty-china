@@ -9,9 +9,10 @@ class MobileTabletTests(AppBrowserCase):
         """Use browser-generated touch input, including normal touch scrolling."""
         self.context.close()
         self.context = self.browser.new_context(
-            viewport={'width': width, 'height': height}, has_touch=True, is_mobile=True)
+            viewport={'width': width, 'height': height}, has_touch=True, is_mobile=True,
+            service_workers='block')
         self.context.add_init_script("localStorage.setItem('bc_auto_sync_enabled', 'false')")
-        self.context.route('https://sync.daka-tool.top/**', self.sync_service)
+        self.configure_request_routes(self.context)
         self.page = self.context.new_page()
         self.page.set_default_timeout(5000)
         self.page.on('pageerror', lambda error: self.errors.append(str(error)))

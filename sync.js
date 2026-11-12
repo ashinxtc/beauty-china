@@ -49,7 +49,8 @@
     constructor(options = {}) {
       this.appId = options.appId || 'beautifulChina';
       this.prefix = options.prefix || 'bc_';
-      this.serverUrl = options.serverUrl || 'https://beauty-china-sync.2378385593.workers.dev';
+      // 正式客户端使用专用域名；发布前必须完成大陆无 VPN 的连通及同步验收。
+      this.serverUrl = options.serverUrl || 'https://beauty-sync.daka-tool.top';
       this.listeners = {};
       this.isSyncing = false;
       this.autoSyncTimer = null;

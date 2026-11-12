@@ -7,9 +7,11 @@ import threading
 import unittest
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+from urllib.parse import urlsplit
 from playwright.sync_api import expect, sync_playwright
 
 ROOT = Path(__file__).resolve().parent
+SYNC_ORIGIN = 'https://beauty-sync.daka-tool.top'
 
 
 class QuietHandler(SimpleHTTPRequestHandler):
@@ -40,13 +42,16 @@ class AppBrowserCase(unittest.TestCase):
         cls.server_thread.join()
 
     def setUp(self):
-        self.context = self.browser.new_context(viewport={'width': 1024, 'height': 768})
+        self.context = self.browser.new_context(
+            viewport={'width': 1024, 'height': 768}, service_workers='block')
         self.context.add_init_script("localStorage.setItem('bc_auto_sync_enabled', 'false')")
         self.cloud = None
         self.requests = []
+        self.external_requests = []
+        self.sync_failure_status = None
         self.errors = []
         self.dialogs = []
-        self.context.route('https://sync.daka-tool.top/**', self.sync_service)
+        self.configure_request_routes(self.context)
         self.page = self.context.new_page()
         self.page.set_default_timeout(5000)
         self.page.on('pageerror', lambda error: self.errors.append(str(error)))
@@ -58,13 +63,30 @@ class AppBrowserCase(unittest.TestCase):
         self.dialogs.append(dialog.message)
         dialog.accept()
 
+    def configure_request_routes(self, context):
+        # Catch every destination, including regressions to the live legacy cloud.
+        context.route('**/*', self.route_test_request)
+
+    def route_test_request(self, route):
+        target = urlsplit(route.request.url)
+        origin = f'{target.scheme}://{target.netloc}'
+        if origin == self.url.rstrip('/'):
+            route.continue_()
+        elif origin == SYNC_ORIGIN:
+            self.sync_service(route)
+        else:
+            self.external_requests.append(route.request.url)
+            route.abort('blockedbyclient')
+
     def sync_service(self, route):
         request = route.request
         self.requests.append((request.method, request.url))
         headers = {'Access-Control-Allow-Origin': '*',
                    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
                    'Access-Control-Allow-Headers': 'Content-Type'}
-        if request.method == 'OPTIONS':
+        if self.sync_failure_status is not None:
+            route.fulfill(status=self.sync_failure_status, json={'error': 'simulated outage'}, headers=headers)
+        elif request.method == 'OPTIONS':
             route.fulfill(status=204, headers=headers)
         elif request.method == 'POST':
             self.cloud = json.loads(request.post_data)
@@ -78,6 +100,7 @@ class AppBrowserCase(unittest.TestCase):
 
     def tearDown(self):
         self.context.close()
+        self.assertEqual(self.external_requests, [], 'Unexpected external requests were blocked')
         self.assertEqual(self.errors, [], 'Unexpected JavaScript errors')
 
     def child_data(self):
@@ -195,10 +218,43 @@ class AppTests(AppBrowserCase):
         self.cloud['childrenData']['child_default']['answerUpdatedAt'] = {'Q_0002': 1}
         self.page.evaluate("CloudSync.setSyncCode('local-test-family'); AppBridge.syncNow()")
         self.assertTrue(any(method == 'POST' for method, _ in self.requests))
+        self.assertEqual({urlsplit(url).netloc for _, url in self.requests}, {'beauty-sync.daka-tool.top'})
         uploaded = self.cloud['childrenData']['child_default']['answers']
         self.assertEqual(uploaded['Q_0001'], 'C')
         self.assertEqual(uploaded['Q_0002'], 'B')
         self.assertIn('双向合并', self.dialogs[-1])
+
+    def test_sync_failure_keeps_local_work_and_never_contacts_a_fallback_cloud(self):
+        self.page.locator('.option-item').nth(2).click()
+        self.page.locator('.q-fav-toggle').click()
+        saved = self.child_data()
+        self.sync_failure_status = 503
+        result = self.page.evaluate("""async () => {
+            CloudSync.setSyncCode('offline-test-family');
+            return await CloudSync.syncToCloud();
+        }""")
+        self.assertFalse(result['ok'])
+        self.assertEqual(len(self.requests), 3)
+        self.assertTrue(all(method == 'GET' for method, _ in self.requests))
+        self.assertEqual({urlsplit(url).netloc for _, url in self.requests}, {'beauty-sync.daka-tool.top'})
+        self.assertEqual(self.child_data(), saved)
+        self.assertIsNone(self.cloud)
+
+    def test_unexpected_external_sync_destinations_are_blocked_by_the_fixture(self):
+        # The guard must fail closed if a future client accidentally reuses an old service.
+        destinations = [
+            'https://sync.daka-tool.top/?code=bc_fixture-only',
+            'https://beauty-china-sync.2378385593.workers.dev/?code=bc_fixture-only',
+        ]
+        for destination in destinations:
+            blocked = self.page.evaluate("""async url => {
+                try { await fetch(url); return false; } catch { return true; }
+            }""", destination)
+            self.assertTrue(blocked)
+        self.assertEqual(self.external_requests, destinations)
+        self.assertEqual(self.requests, [])
+        # These probes were intentional; all other tests retain the strict teardown guard.
+        self.external_requests.clear()
 
     def test_repeating_the_same_answer_updates_its_timestamp(self):
         self.page.locator('.option-item').nth(2).click()
