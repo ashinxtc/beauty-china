@@ -46,7 +46,7 @@ class AppBrowserCase(unittest.TestCase):
         self.requests = []
         self.errors = []
         self.dialogs = []
-        self.context.route('https://sync.daka-tool.top/**', self.sync_service)
+        self.context.route('https://beauty-sync.daka-tool.top/**', self.sync_service)
         self.page = self.context.new_page()
         self.page.set_default_timeout(5000)
         self.page.on('pageerror', lambda error: self.errors.append(str(error)))
@@ -221,7 +221,7 @@ class AppTests(AppBrowserCase):
         self.assertTrue(self.page.locator('.result-banner').is_visible())
 
     def test_retired_saved_favorites_and_mistakes_do_not_reappear(self):
-        pending = json.loads((ROOT / 'pending_questions.json').read_text())
+        pending = json.loads((ROOT / 'pending_questions.json').read_text(encoding='utf-8'))
         self.page.evaluate("""uid => {
             const data=CloudSync.getActiveChildData();data.favorites[uid]=true;
             data.mistakes[uid]={mastered:false};CloudSync.saveActiveChildData(data);

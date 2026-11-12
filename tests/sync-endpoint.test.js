@@ -5,7 +5,6 @@ const vm = require('node:vm');
 const { test } = require('node:test');
 
 const CUSTOM_ORIGIN = 'https://beauty-sync.daka-tool.top';
-const ORIGINAL_ORIGIN = 'https://beauty-china-sync.2378385593.workers.dev';
 const source = fs.readFileSync(path.join(__dirname, '..', 'sync.js'), 'utf8');
 
 function existingFamily() {
@@ -80,13 +79,13 @@ function device({ search = '', initialStorage = existingFamily(),
     respond: callback => { handler = callback; } };
 }
 
-test('only the fixed custom-domain preview selector changes the production endpoint', () => {
+test('ordinary pages and old preview links use the same fixed custom domain', () => {
   for (const search of ['', '?sync-preview=', '?sync-preview=custom-domain-extra',
     '?sync-preview=Custom-Domain', '?sync-preview=custom-domain%00',
     '?other=custom-domain', '?sync-preview=https%3A%2F%2Funtrusted.example',
     '?sync-preview=disabled&sync-preview=custom-domain',
     '?serverUrl=https%3A%2F%2Funtrusted.example&sync-url=https%3A%2F%2Funtrusted.example']) {
-    assert.equal(device({ search }).engine.serverUrl, ORIGINAL_ORIGIN, search);
+    assert.equal(device({ search }).engine.serverUrl, CUSTOM_ORIGIN, search);
   }
   for (const search of ['?sync-preview=custom-domain',
     '?other=value&sync-preview=custom-domain', '?sync-preview=custom%2Ddomain',
@@ -95,11 +94,11 @@ test('only the fixed custom-domain preview selector changes the production endpo
     assert.equal(device({ search }).engine.serverUrl, CUSTOM_ORIGIN, search);
   }
   assert.equal(device({ search: '?sync-preview=custom-domain', withParameters: false }).engine.serverUrl,
-    ORIGINAL_ORIGIN);
-  assert.equal(device({ withLocation: false }).engine.serverUrl, ORIGINAL_ORIGIN);
+    CUSTOM_ORIGIN);
+  assert.equal(device({ withLocation: false }).engine.serverUrl, CUSTOM_ORIGIN);
 });
 
-test('preview selection preserves existing profiles, records, sync code and sync metadata byte for byte', () => {
+test('the endpoint cutover preserves profiles, records, sync code and sync metadata byte for byte', () => {
   for (const search of ['', '?sync-preview=custom-domain',
     '?sync-preview=custom-domain&code=another-family&sync-code=another-family']) {
     const d = device({ search });
@@ -110,7 +109,7 @@ test('preview selection preserves existing profiles, records, sync code and sync
   }
 });
 
-test('explicit constructor serverUrl overrides the preview while query URLs cannot override it', async () => {
+test('explicit constructor serverUrl overrides the default while query URLs cannot override it', async () => {
   const d = device({ search: '?sync-preview=custom-domain&serverUrl=https%3A%2F%2Funtrusted.example' });
   const configured = new d.engine.constructor({ serverUrl: 'https://configured-beauty.example' });
   d.respond((url, options) => options.method === 'POST' ? response(200) : response(404));
@@ -119,8 +118,8 @@ test('explicit constructor serverUrl overrides the preview while query URLs cann
   assert.ok(d.requests.every(request => new URL(request.url).origin === 'https://configured-beauty.example'));
 });
 
-test('the preview singleton merges and uploads using only the fixed custom domain and stored family code', async () => {
-  const d = device({ search: '?sync-preview=custom-domain&code=untrusted-family&serverUrl=https%3A%2F%2Funtrusted.example' });
+test('the singleton merges and uploads using only the fixed custom domain and stored family code', async () => {
+  const d = device({ search: '?code=untrusted-family&serverUrl=https%3A%2F%2Funtrusted.example' });
   let cloud = { _app: 'beautifulChina', _syncTs: 2000, profiles: existingFamily().bc_profiles,
     childrenData: { child_default: { answers: { Q_0002: 'B' }, answerUpdatedAt: { Q_0002: 2000 } } } };
   d.respond((url, options) => {
@@ -146,8 +145,8 @@ test('the preview singleton merges and uploads using only the fixed custom domai
 });
 
 for (const failure of ['HTTP 503', 'network error']) {
-  test(`a preview ${failure} preserves local data and never falls back to another endpoint`, async () => {
-    const d = device({ search: '?sync-preview=custom-domain' });
+  test(`a custom-domain ${failure} preserves local data and never falls back to another endpoint`, async () => {
+    const d = device();
     d.respond(() => {
       if (failure === 'network error') throw new TypeError('Failed to fetch');
       return response(503);

@@ -11,7 +11,7 @@ class MobileTabletTests(AppBrowserCase):
         self.context = self.browser.new_context(
             viewport={'width': width, 'height': height}, has_touch=True, is_mobile=True)
         self.context.add_init_script("localStorage.setItem('bc_auto_sync_enabled', 'false')")
-        self.context.route('https://sync.daka-tool.top/**', self.sync_service)
+        self.context.route('https://beauty-sync.daka-tool.top/**', self.sync_service)
         self.page = self.context.new_page()
         self.page.set_default_timeout(5000)
         self.page.on('pageerror', lambda error: self.errors.append(str(error)))
